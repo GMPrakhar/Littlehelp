@@ -8,6 +8,82 @@
 
   <% include ../partials/nav.ejs %>
 
+
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class='row'>
+            <div class="col-md-2"></div>
+            <div class="carousel-card col-md-8">
+              <h2>Developers</h2>
+              <table class="developers">
+                <tr>
+                    <td><img src="node.svg" class="img"><br> Prakhar Londhe</td>
+                    <td><img src="/developers/govind.webp" class="img"><br> Govind Choudhary</td>    
+                </tr>
+                <tr>
+                    <td><img src="node.svg" class="img"><br> Harsh Hirani</td>
+                    <td><img src="/developers/abhijeet.webp" class="img"><br> Abhijeet Jain</td>    
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+            <div class='row'>
+                <div class="col-md-2"></div>
+                <div class="carousel-card col-md-8">
+                  <h4>Welcome To All new Littlehelp!</h4><br/>
+                  <table class="developers">
+                      <tr>
+                          <td><img src="/icons/notebook.svg" class="img-icon"><br> Browse Material</td>
+                          <td><img src="/icons/upload.svg" class="img-icon"><br> Upload Material</td>    
+                      </tr>
+                      <tr>
+                          <td><img src="/icons/ten.svg" class="img-icon"><br> Calculate Pointer</td>
+                          <td><img src="/icons/question.svg" class="img-icon"><br> Discuss Queries</td>    
+                      </tr>
+                    </table>
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+        </div>
+        <div class="carousel-item">
+            <div class='row'>
+                <div class="col-md-2"></div>
+                <div class="carousel-card col-md-8">
+                </div>
+                <div class="col-md-2"></div>
+              </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  <!--
 <div class="jumbotron text-center">
   <div class="container">
     <a href="/" class="lang-logo">
@@ -55,12 +131,27 @@
         <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
       </ul>
     </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
+  </div>    <div class="alert alert-info text-center" role="alert">
     Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
   </div>
 </div>
-
+-->
 
 </body>
+<script>
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+$('.nav-item').mouseover(function(){
+  var left = $(this).offset().left + 10;
+  var width = $(this).width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+
+$('.nav-item').mouseout(function(){
+  var left = $('.current').offset().left + 10;
+  var width = $('.current').width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+</script>
 </html>

@@ -1,27 +1,113 @@
-.jumbotron {
-  background: #532F8C;
-  color: white;
-  padding-bottom: 80px; }
-  .jumbotron .btn-primary {
-    background: #845ac7;
-    border-color: #845ac7; }
-    .jumbotron .btn-primary:hover {
-      background: #7646c1; }
-  .jumbotron p {
-    color: #d9ccee;
-    max-width: 75%;
-    margin: 1em auto 2em; }
-  .navbar + .jumbotron {
-    margin-top: -20px; }
-  .jumbotron .lang-logo {
-    display: block;
-    background: #B01302;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white; }
-    .jumbotron .lang-logo img {
-      max-width: 100%; }
+a{
+  text-decoration: none;
+}
 
+a:hover{
+  text-decoration: none;
+}
+
+#marker{
+  position: absolute;
+  width: 9em;
+  height: 2px;
+  background: white;
+  top: 90px;
+}
+
+.nav-link{
+  font-size: large ;
+  color: white !important;
+}
+
+
+@keyframes glow{
+  0% {
+    text-shadow: 0 0px 20px rgb(204,204,204),
+     0 0px 6px rgb(201,201,201);}
+  100% {
+    text-shadow: 0 0px 20px rgb(204,204,204),
+     0 0px 15px rgb(201,201,201);}
+  
+}
+
+.navbar-brand{
+  font-size: 47px ;
+  color: white !important;
+  text-shadow: 0 0px 20px rgb(204,204,204),
+   0 0px 6px rgb(201,201,201);
+ 
+  font-family: Arial, Helvetica, sans-serif !important; 
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.navbar{
+  background: transparent;
+  border: none !important;
+  padding: 30px;
+}
+
+
+.current{
+  color: rgb(196, 189, 189) !important;
+}
+
+
+body{
+  background: #532F8C;
+}
+
+.carousel-card{
+  text-align: center;
+  padding: 20px;
+  height: 75vh;
+  background: white;
+}
+
+.img{
+  height: 60%;
+  width: 25%;
+  border-radius: 50%;
+}
+.img-icon{
+  height: 40%;
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+.developers{
+  text-align: left;
+  width: 100%;
+}
+
+td{
+  font-size: normal;
+  text-align: center;
+  height: 180px;
+  transition: box-shadow 0.4s;
+  cursor: pointer;
+}
+td:hover{
+  box-shadow: 0 0px 5px #BBB;
+}
+
+@media only screen and (max-width: 600px){
+  .img{
+    
+  height: 50%;
+  width: 50%;
+  }
+
+  td{
+    font-size: normal;
+    width: 50%;
+    box-shadow: 0 0px 5px #EEE;
+    transition: box-shadow 0.4s;
+  }
+
+  td:hover{
+    box-shadow: 0 0px 5px #BBB;
+  }
+}
