@@ -94,6 +94,11 @@ td:hover{
 }
 
 @media only screen and (max-width: 600px){
+
+  #marker{
+    display: none;
+  }
+
   .img{
     
   height: 50%;
