@@ -43,22 +43,14 @@
                   <h4>Welcome To All new Littlehelp!</h4><br/>
                   <table class="developers">
                       <tr>
-                          <td><img src="/icons/notebook.svg" class="img-icon"><br> Browse Material</td>
-                          <td><img src="/icons/upload.svg" class="img-icon"><br> Upload Material</td>    
+                          <td data-src="/study"><img src="/icons/notebook.svg" class="img-icon"><br> Browse Material</td>
+                          <td data-src="/upload"><img src="/icons/upload.svg" class="img-icon"><br> Upload Material</td>    
                       </tr>
                       <tr>
                           <td><img src="/icons/ten.svg" class="img-icon"><br> Calculate Pointer</td>
                           <td><img src="/icons/question.svg" class="img-icon"><br> Discuss Queries</td>    
                       </tr>
                     </table>
-                </div>
-                <div class="col-md-2"></div>
-              </div>
-        </div>
-        <div class="carousel-item">
-            <div class='row'>
-                <div class="col-md-2"></div>
-                <div class="carousel-card col-md-8">
                 </div>
                 <div class="col-md-2"></div>
               </div>
@@ -141,7 +133,7 @@
 <script>
     var left = $('.current').offset().left + 10;
     var width = $('.current').width();
-    $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
 $('.nav-item').mouseover(function(){
   var left = $(this).offset().left + 10;
   var width = $(this).width();
@@ -152,6 +144,13 @@ $('.nav-item').mouseout(function(){
   var left = $('.current').offset().left + 10;
   var width = $('.current').width();
   $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+
+$('td').click(function(){
+  var src = $(this).attr('data-src');
+  if(src!=undefined){
+    location.href = src;
+  }
 });
 </script>
 </html>

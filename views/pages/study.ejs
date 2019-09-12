@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="form-group mobile">
+    <label for="semm">Semester: </label>
+    <select class="form-control" id="semm">
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+        <option>IV</option>
+        <option>V</option>
+        <option>VI</option>
+        <option>VII</option>
+        <option>VIII</option>
+    </select>
+    <label for="branchm">Branch: </label>
+    <select class="form-control" id="branchm">
+        <option>CS</option>
+        <option>IT</option>
+        <option>ETC</option>
+        <option>EI</option>
+        <option>Mech</option>
+        <option>Civil</option>
+    </select>
+    <label for="typem">Type: </label>
+    <select class="form-control" id="typem">
+        <option>Notes</option>
+        <option>Question Papers</option>
+        <option>Books</option>
+        <option>Other</option>
+    </select><br>
+    <button type="button" class="btn btn-primary btn-md btn-block study-btn">Submit</button>
+</div>
+
+<div class="form-group row desktop">
+    <div class="col-4">
+        <label for="sem">Semester: </label>
+        <select class="form-control" id="sem">
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option>IV</option>
+                <option>V</option>
+                <option>VI</option>
+                <option>VII</option>
+                <option>VIII</option>
+        </select>
+    </div>
+    <div class="col-4">
+        <label for="branch">Branch: </label>
+        <select class="form-control" id="branch">
+                <option>CS</option>
+                <option>IT</option>
+                <option>ETC</option>
+                <option>EI</option>
+                <option>Mech</option>
+                <option>Civil</option>
+        </select>
+    </div>
+    <div class="col-4">
+        <label for="type">Type: </label>
+        <select class="form-control" id="type">
+                <option>Notes</option>
+                <option>Question Papers</option>
+                <option>Books</option>
+                <option>Other</option>
+        </select>
+    </div>
+</div>
+
+<div class="col-md-4 col-xs-12">
+    
+</div>
+
+</body>
+<script>
+    $('.current').removeClass('current');
+    $('.nav-item:nth-of-type(2)').addClass('current');
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
+$('.nav-item').mouseover(function(){
+  var left = $(this).offset().left + 10;
+  var width = $(this).width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+
+$('.nav-item').mouseout(function(){
+  var left = $('.current').offset().left + 10;
+  var width = $('.current').width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+</script>
+</html>

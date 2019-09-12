@@ -59,6 +59,7 @@ body{
   background: #532F8C;
 }
 
+
 .carousel-card{
   text-align: center;
   padding: 20px;
@@ -93,6 +94,49 @@ td:hover{
   box-shadow: 0 0px 5px #BBB;
 }
 
+.form-group{
+
+  height: 70vh !important;
+  background: white;
+  padding: 20px;
+}
+
+.form-control{
+  cursor: pointer;
+}
+
+.mobile{
+  display: none;
+}
+
+.desktop{
+  height: 20vh !important;
+}
+
+select{
+  background: lightgray !important;
+  font-weight: 500;
+}
+
+option{
+  font-weight: 500;
+}
+
+.encloser{
+  height: 75vh !important;
+  width: 50%;
+  padding: 20px;
+  margin-left: 25%;
+  background: white;
+}
+
+.upload-form{
+  position: absolute;
+  width: 30%;
+  background: transparent;
+  margin-left: 9.5%;
+}
+
 @media only screen and (max-width: 600px){
 
   #marker{
@@ -105,6 +149,14 @@ td:hover{
   width: 50%;
   }
 
+  .mobile{
+    display: block;
+  }
+
+  .desktop{
+    display: none;
+  }
+
   td{
     font-size: normal;
     width: 50%;
@@ -115,4 +167,17 @@ td:hover{
   td:hover{
     box-shadow: 0 0px 5px #BBB;
   }
+
+  .encloser{
+    width : 100%;
+    margin-left: 0px;
+  }
+
+  
+.upload-form{
+  position: initial;
+  width: 100%;
+  background: transparent;
+  margin-left: 0px;
+}
 }
