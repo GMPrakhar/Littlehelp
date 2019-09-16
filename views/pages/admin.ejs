@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    
+  <% include ../partials/header.ejs %>
+  <style>
+
+  .file{
+      cursor: pointer;
+      padding: 10px;
+  }
+
+  a{
+      color: white;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<div ng-app="lh" ng-controller="myCtrl">
+    <div class="createFolder">
+        <input type="text" id="folderName"> <button ng-click="createFolder()">+ Create Folder</button>
+    </div>
+    <div ng-repeat="folder in folders" id="{{folder.id}}" class="folder">
+        <img src="icons/folder.png">
+        <span ng-click="openFolder(folder.id)">{{folder.name}}</span>
+        <button ng-click="delete(folder.id)" class="btn btn-danger">Del</button>
+    </div>
+    <div ng-repeat="file in files" id="{{file.id}}" class="file">
+        <img src="icons/file.png">
+        <a href="https://drive.google.com/open?id={{file.id}}">{{file.name}}</a>
+        
+    <button ng-click="delete(file.id)" class="btn btn-danger">Del</button>
+    </div>
+</div>
+
+</body>
+<script>
+
+    var app = angular.module("lh", []);
+    app.controller("myCtrl", function($scope, $http) {
+        $scope.files = [];
+        $scope.folders = [];
+        $scope.firstName = "John";
+        $scope.lastName = "Doe";
+        $scope.parentid = 'root';
+
+        $http.get('/fileList').then(function(response){
+            var files = response.data.files;
+            $scope.files = files;
+        });
+        $http.get('/folderList').then(function(response){
+            var folders = response.data.folders;
+            $scope.folders = folders;
+        });
+
+        $scope.delete = function(id){
+            var pr = confirm("Are you Sure you want to delete this?");
+            if(pr){
+                $http.get('/deleteFile?id='+id).then(function(response){
+                    console.log(response.data);
+                });
+            }
+
+        }
+
+        $scope.createFolder = function(){
+            var name = $('#folderName').val();
+            var folder = {name: name};
+            console.log(name);
+            $http.get('/createFolder?name='+name+'&parent='+$scope.parentid).then(function(response){
+                console.log(response);
+            });
+        }
+
+        
+        $scope.openFolder = function(id){
+            $scope.parentid = id;
+
+            $http.get('/fileList?parent='+id).then(function(response){
+            var files = response.data.files;
+            $scope.files = files;
+             });
+             $http.get('/folderList?parent='+id).then(function(response){
+            var folders = response.data.folders;
+            $scope.folders = folders;
+            var elemsid = [];
+            folders.forEach(element => {
+                elemsid.push(element.id);
+            });
+            console.log(elemsid);
+             });
+        }
+
+      
+    });
+    
+    </script>
+
+</html>

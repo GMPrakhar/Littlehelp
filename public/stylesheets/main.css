@@ -149,12 +149,9 @@ option{
   width: 50%;
   }
 
-  .mobile{
-    display: block;
-  }
 
   .desktop{
-    display: none;
+    height: 50vh !important;
   }
 
   td{
