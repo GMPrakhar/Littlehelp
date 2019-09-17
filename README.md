@@ -23,6 +23,6 @@ If you want to make changes to the backend of the project, then you need to firs
 6. First you need to use the 'enableViewPermission' in index.js method to be able to upload files to gdrive.
 
 - For further Details contact
-[Prakhar Londhe] https://github.com/GMPrakhar
+[Prakhar Londhe](https://github.com/GMPrakhar)
 
 #### You are ready to contribute!
