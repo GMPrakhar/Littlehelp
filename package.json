@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A nodejs implementation for the Littlehelp Platform",
   "engines": {
-    "node": "6.11.1"
+    "node": "12.10.0"
   },
   "main": "index.js",
   "scripts": {
