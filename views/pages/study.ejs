@@ -8,7 +8,38 @@
 <body>
 
   <% include ../partials/nav.ejs %>
-
+<!--
+<div class="form-group mobile">
+    <label for="semm">Semester: </label>
+    <select class="form-control" id="semm">
+        <option>I</option>
+        <option>II</option>
+        <option>III</option>
+        <option>IV</option>
+        <option>V</option>
+        <option>VI</option>
+        <option>VII</option>
+        <option>VIII</option>
+    </select>
+    <label for="branchm">Branch: </label>
+    <select class="form-control" id="branchm">
+        <option>CS</option>
+        <option>IT</option>
+        <option>ETC</option>
+        <option>EI</option>
+        <option>Mech</option>
+        <option>Civil</option>
+    </select>
+    <label for="typem">Type: </label>
+    <select class="form-control" id="typem">
+        <option>Notes</option>
+        <option>Question Papers</option>
+        <option>Books</option>
+        <option>Other</option>
+    </select><br>
+    <button type="button" class="btn btn-primary btn-md btn-block study-btn">Submit</button>
+</div>
+-->
 <div ng-app="lh" ng-controller="myCtrl">
     <div class="form-group row desktop">
         <div class="col-md-4 col-xs-12">
@@ -58,8 +89,6 @@
 
 </body>
 <script>
-
-    //--------------Value of options = Folder Id of all google drive folders -----------------------
     var drive_arr = ["12JTuWJqxB4XwK-3XcSnXFYP2Zrl8SAjU", "1XROM3Wj6mHAEeLPq3aznqICfU0rpPZMY", "1AP6o61I12drcbGLIHTkogX-1T9qIMghf", "1rfBVBb-X26w4Wohdc2nj1TbWAbt_68n5", "1ZMZ9op4Q1fw2_1WMCVckqhzgRkoAgPTr", "1TKqtiaNTvOhEhTtw6_1FH3JIzqVlXiL3",
    "1Zbywe2z39Ab8wu8Rt02aoXK1jJrrQmaO", "1yJJzCbIPitG3UFLr1t1VeMiBb2NS2015", "1tY6_-K9oFfy4I_3pafvwlyzA0-LRZb1p", "1VGk1uBxuYoyy05jnwlIvwh_sJskNWBc0",
    "1vZIgq_0MthVpHbTyrV8cPAe1gKoXcSBv", "1kEGQ7NFBsbsgFV_LXVCeBBC2gWjQXtpw", "1w1eX1iWTx8RCr7XfSK51ixP4HNl29goE", "1PDpLm3Pm90txBbJL8hyF7i9m8QxVj5Vv", "1fMSz9gQHmJ_cVfcaCeWMWNw7k-L1ZnWf", "1feA5FBQsnvhwYNIch6awiGeK-ABwQc0m", "19jzGpg8aBR8xFluK-ot54hNhQSVJ2Yia"];
@@ -81,9 +110,7 @@
     var app = angular.module("lh", []);
     app.controller("myCtrl", function($scope, $http) {
         $scope.files = [];
-      //----- If you want to work in backend then uncomment this--------
-      /*
-            $scope.getResults = function(){
+        $scope.getResults = function(){
             var sem = $scope.sem;
             var branch = $scope.branch;
             var type = $scope.type;
@@ -93,48 +120,9 @@
                 $scope.files = files;
                 console.log(files);
             });
-        }*/
-
-
-        //--------- If you want to work in backend then comment this.. --------
-        //---------This is used to populate the files array with random gibber----
-
-        $scope.files = [
-            {
-                name : "MST1.pdf",
-                properties : {sem: "I", branch: "CS", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            },
-            {
-                name : "MST2.pdf",
-                properties : {sem: "II", branch: "ETC", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            },
-            {
-                name : "MST1.pdf",
-                properties : {sem: "IV", branch: "Mech", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            },
-            {
-                name : "MST1.pdf",
-                properties : {sem: "VII", branch: "CS", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            },
-            {
-                name : "MST1.pdf",
-                properties : {sem: "IX", branch: "CS", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            },
-            {
-                name : "MST1.pdf",
-                properties : {sem: "100", branch: "CS", type: "Notes", uploader: "Pappu"},
-                webViewLink : "http://www.facebook.com"
-            }
-        ]
-    
+        }
     });
 
-   //------------------- Used to move the underline marker in the navigation bar ----------------------
 
     $('.current').removeClass('current');
     $('.nav-item:nth-of-type(2)').addClass('current');
