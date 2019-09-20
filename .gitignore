@@ -6,7 +6,6 @@ npm-debug.log
 *.env
 *.dev
 .DS_Store
-credentials.json
 
 # Docker
 Dockerfile
