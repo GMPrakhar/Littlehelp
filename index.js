@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var formidable = require('formidable');
+var session = require('express-session');
 const { google } = require('googleapis')
 const key = require("./credentials.json");
 const scopes = 'https://www.googleapis.com/auth/drive';
@@ -11,6 +12,10 @@ const jwt = new google.auth.JWT(
   key.private_key,
   scopes
 );
+
+app.use(session({secret: 'sess1207'}));
+app.use(express.json());     
+app.use(express.urlencoded());
 let drive = google.drive('v3');
 
 
@@ -31,11 +36,17 @@ app.get('/', function(request, response) {
 });
 
 app.get('/upload', function(request, response) {
+  if(!request.session.user){
+    response.render('pages/signin');
+  }else
   response.render('pages/upload');
 });
 
 
 app.get('/study', function(request, response) {
+  if(!request.session.user){
+    response.render('pages/signin');
+  }else
   response.render('pages/study');
 });
 
@@ -81,6 +92,7 @@ app.post('/uploadFile', function(req, res){
       }, function (err2, file) {
         if (err2) {
           // Handle error
+          res.end("some err occured");
           console.error(err2);
         } else {
           console.log('Uploaded File Id: ', file);
@@ -130,6 +142,13 @@ app.get('/getResults', function(req,res){
     );
   });
 });
+
+
+app.post('/userSignedIn', function(req, res){
+  req.session.user = req.body.user;
+  res.end("Signed In");
+});
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
