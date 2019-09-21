@@ -56,8 +56,24 @@ a:hover{
 
 
 body{
-  background: #532F8C;
+
+  background: repeating-linear-gradient(-45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), repeating-linear-gradient(45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), #FFF;
+  background-blend-mode: multiply;
 }
+
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
 
 
 .carousel-card{
@@ -123,7 +139,7 @@ option{
 }
 
 .encloser{
-  height: 75vh !important;
+  height: 100vh !important;
   width: 50%;
   padding: 20px;
   margin-left: 25%;

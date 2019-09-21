@@ -10,8 +10,7 @@
         <center><h4>File Upload</h4></center><br>
         <form class="form-group upload-form" method="POST" enctype="multipart/form-data" action="/uploadFile">
                 <label for="semm">Semester: </label>
-                <select class="form-control" id="semm" name="sem" onchange="$('#sem').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="semm" name="sem" required>
                     <option>I Year</option>
                     <option>III</option>
                     <option>IV</option>
@@ -21,8 +20,7 @@
                     <option>VIII</option>
                 </select>
                 <label for="branchm">Branch: </label>
-                <select class="form-control" id="branchm" name="branch" onchange="$('#branch').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="branchm" name="branch" required>
                     <option>CS</option>
                     <option>IT</option>
                     <option>ETC</option>
@@ -31,17 +29,49 @@
                     <option>Civil</option>
                 </select>
                 <label for="typem">Type: </label>
-                <select class="form-control" id="typem" name="type" onchange="$('#type').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="typem" name="type" required>
                     <option>Notes</option>
                     <option>Question Papers</option>
                     <option>Books</option>
                     <option>Other</option>
+                </select>
+
+                <label for="year">Year: </label>
+                <select class="form-control" id="year" name="year" required>
+                    <option value=""><%= new Date().getFullYear(); %></option>
+                    <option><%= new Date().getFullYear() -1; %></option>
+                    <option><%= new Date().getFullYear() -2; %></option>
+                    <option><%= new Date().getFullYear() -3; %></option>
+                    <option><%= new Date().getFullYear() -4; %></option>
+                </select>
+
+                <label for="subject">Subject: </label>
+                <select class="form-control" id="subject" name="subject" required>
+                    <option value=""><%= new Date().getFullYear(); %></option>
+                    <option><%= new Date().getFullYear() -1; %></option>
+                    <option><%= new Date().getFullYear() -2; %></option>
+                    <option><%= new Date().getFullYear() -3; %></option>
+                    <option><%= new Date().getFullYear() -4; %></option>
                 </select><br>
-                <input type="file" class="form-control" name="filetoupload"><br>
-                <input type="hidden" id="sem" name="actsem" value="I Year">
-                <input type="hidden" id="branch" name="actbr" value="CS">
-                <input type="hidden" id="type" name="acttype" value="Notes">
+                <div class="">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" value="MST1">
+                    <label class="custom-control-label" for="customCheck1">MST 1</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2" value="MST2">
+                    <label class="custom-control-label" for="customCheck2">MST 2</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" value="MST3">
+                    <label class="custom-control-label" for="customCheck3">MST 3</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4" value="END">
+                    <label class="custom-control-label" for="customCheck4">End Sem</label>
+                  </div>
+                </div>  
+                  <br>
                 <button type="submit" class="btn btn-primary btn-md btn-block study-btn" >Submit</button>
               </form>
     </div>
@@ -57,8 +87,6 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3693901&101" alt="free counter statistics" border="0"></a></noscript>
-<!-- Histats.com  END  -->
 
 <script>
   var drive_arr = ["12JTuWJqxB4XwK-3XcSnXFYP2Zrl8SAjU", "1XROM3Wj6mHAEeLPq3aznqICfU0rpPZMY", "1AP6o61I12drcbGLIHTkogX-1T9qIMghf", "1rfBVBb-X26w4Wohdc2nj1TbWAbt_68n5", "1ZMZ9op4Q1fw2_1WMCVckqhzgRkoAgPTr", "1TKqtiaNTvOhEhTtw6_1FH3JIzqVlXiL3",

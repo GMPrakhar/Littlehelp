@@ -48,13 +48,22 @@ app.post('/uploadFile', function(req, res){
       if(fields.sem != "any") parents.push(fields.sem);
       if(fields.branch != "any") parents.push(fields.branch);
       if(fields.type != "any") parents.push(fields.type);
+      var subject = fields.subject?fields.subject:"";
+      var uploader = fields.uploader?fields.uploader:"Littlehelp Team";
+      var userId = fields.userId?fields.userId:"1";
+      var topic = fields.topic?fields.topic:"";
+      var year = fields.year?fields.year:"2019";
+      var mst = fields.mst?fields.mst:[];
       console.log(parents);
       var fileMetadata = {
         'name': files.filetoupload.name,
         parents: parents,
-        properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: "Littlehelp Team"}
+        properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: uploader,
+        subject: subject, userId: userId, topic: topic, year: year, views: 0, mst: mst
+      }
         
       };
+      
       var media = {
         mimeType: files.filetoupload.type,
         body: fs.createReadStream(files.filetoupload.path)
@@ -62,16 +71,6 @@ app.post('/uploadFile', function(req, res){
 
 
       jwt.authorize((err, response) => {
-       /* google.drive('v3').files.list(
-          {
-            auth: jwt,
-          },
-          (err, result) => {
-            console.log(err);
-            console.log(result.data.files);
-          }
-        );
-      */
         
       drive.files.create({
         auth: jwt,
@@ -117,6 +116,7 @@ app.get('/getResults', function(req,res){
       {
         auth: jwt,
         q: "mimeType!='application/vnd.google-apps.folder' " + parents,
+   //     q: "properties has { key='subject' and value=''}",
         fields: "files(name, id, properties, createdTime, webViewLink)"
       },
       (err, result) => {
