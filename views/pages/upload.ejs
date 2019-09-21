@@ -61,14 +61,12 @@ hs.src = ('//s10.histats.com/js15_as.js');
 <!-- Histats.com  END  -->
 
 <script>
+  //--------------Value of options = Folder Id of all google drive folders -----------------------
   var drive_arr = ["12JTuWJqxB4XwK-3XcSnXFYP2Zrl8SAjU", "1XROM3Wj6mHAEeLPq3aznqICfU0rpPZMY", "1AP6o61I12drcbGLIHTkogX-1T9qIMghf", "1rfBVBb-X26w4Wohdc2nj1TbWAbt_68n5", "1ZMZ9op4Q1fw2_1WMCVckqhzgRkoAgPTr", "1TKqtiaNTvOhEhTtw6_1FH3JIzqVlXiL3",
    "1Zbywe2z39Ab8wu8Rt02aoXK1jJrrQmaO", "1yJJzCbIPitG3UFLr1t1VeMiBb2NS2015", "1tY6_-K9oFfy4I_3pafvwlyzA0-LRZb1p", "1VGk1uBxuYoyy05jnwlIvwh_sJskNWBc0",
    "1vZIgq_0MthVpHbTyrV8cPAe1gKoXcSBv", "1kEGQ7NFBsbsgFV_LXVCeBBC2gWjQXtpw", "1w1eX1iWTx8RCr7XfSK51ixP4HNl29goE", "1PDpLm3Pm90txBbJL8hyF7i9m8QxVj5Vv", "1fMSz9gQHmJ_cVfcaCeWMWNw7k-L1ZnWf", "1feA5FBQsnvhwYNIch6awiGeK-ABwQc0m", "19jzGpg8aBR8xFluK-ot54hNhQSVJ2Yia"];
         $('.current').removeClass('current');
         $('.nav-item:nth-of-type(3)').addClass('current');
-    var left = $('.current').offset().left + 10;
-    var width = $('.current').width();
-    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
     var count =  16;
     $('#semm option').each((ind, elem)=>{
       if(ind!=0) 
@@ -82,7 +80,15 @@ hs.src = ('//s10.histats.com/js15_as.js');
       if(ind!=0)
       $(elem).attr('value',drive_arr[count--]);
     });
-$('.nav-item').mouseover(function(){
+   
+   
+   //------------------- Used to move the underline marker in the navigation bar ----------------------
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
+   
+
+    $('.nav-item').mouseover(function(){
   var left = $(this).offset().left + 10;
   var width = $(this).width();
   $('#marker').stop().animate( {  left: left, width: width  }, 500 );
