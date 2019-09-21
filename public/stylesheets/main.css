@@ -153,6 +153,19 @@ option{
   margin-left: 9.5%;
 }
 
+
+.filer{
+  padding: 20px;
+  background: #AA6D00;
+  color: white;
+  margin: 20px 40px;
+  cursor: pointer;
+}
+
+.filer:nth-child(3n+1){
+  margin-left: 80px;
+}
+
 @media only screen and (max-width: 600px){
 
   #marker{

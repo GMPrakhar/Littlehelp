@@ -77,12 +77,27 @@
                     <option>Other</option>
             </select>
         </div>
+        <div class="col-md-4 col-xs-12">
+           <input type="range" oninput="changed('red', this)" min="0" max="255" value="0">
+        </div>
+        <div class="col-md-4 col-xs-12">
+                <input type="range" oninput="changed('green', this)" min="0" max="255" value="0">
+        </div>
+        <div class="col-md-4 col-xs-12">
+                <input type="range" oninput="changed('blue', this)" min="0" max="255" value="0">
+        </div>
+        
+        <div class="col-md-4 col-xs-12">
+                <button class="btn btn-info" onclick="output()">Output RGBA</button>
+        </div>
+        <div class="col-md-4 col-xs-12">
+                <button class="btn btn-info" onclick="toggle()">Toggle Font Color (W/B)</button>
+        </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 col-xs-12" style="color:white;" ng-repeat="file in files" class="studyFile" ng-click="location.href='file.webViewLink'">
+    <div class="row file-enc">
+        <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files" class="studyFile" ng-click="redirect(file.webViewLink)">
             <span>{{file.properties.sem}} {{file.properties.branch}} {{file.properties.type}}</span>
             {{file.name}}
-            {{file.properties.uploader}}
             {{file.properties}}
         </div>
     </div>
@@ -135,6 +150,10 @@ hs.src = ('//s10.histats.com/js15_as.js');
                 console.log(files);
             });
         }
+
+        $scope.redirect = function(link){
+            location.href = link;
+        }
     });
 
 
@@ -154,5 +173,32 @@ $('.nav-item').mouseout(function(){
   var width = $('.current').width();
   $('#marker').stop().animate( {  left: left, width: width  }, 500 );
 });
+
+let red = 0, green =0, blue = 0;
+let col = "white";
+function changed(col, elem){
+    console.log("CHanged");
+    switch(col){
+        case 'red':  red = $(elem).val(); break;
+        case 'green':  green = $(elem).val();break;
+        case 'blue':  blue = $(elem).val();
+    }
+    $('.filer').css('background', 'rgba('+red+', '+green+','+blue+',1)');
+}
+
+function output(){
+    console.log(red, green, blue);
+}
+
+function toggle(){
+    if(col=="white"){
+        $('.filer').css('color', 'black');
+        col = "black";
+    }else{
+        $('.filer').css('color', 'white');
+        col = "white";
+    }
+}
+
 </script>
 </html>
