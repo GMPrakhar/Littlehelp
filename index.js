@@ -67,7 +67,7 @@ app.post('/uploadFile', function(req, res){
         'name': files.filetoupload.name,
         parents: parents,
         properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: uploader,
-        subject: subject, userId: userId, topic: topic, year: year, views: 0, mst: mst
+        subject: subject, userId: userId, topic: topic, year: year, views: views, mst: mst
       }
         
       };
