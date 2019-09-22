@@ -59,6 +59,8 @@ body{
 
   background: repeating-linear-gradient(-45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), repeating-linear-gradient(45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), #FFF;
   background-blend-mode: multiply;
+  background-size: 400% 400%;
+  overflow-x: hidden;
 }
 
 @keyframes gradientBG {

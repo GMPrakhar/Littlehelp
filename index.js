@@ -40,6 +40,13 @@ app.get('/study', function(request, response) {
 });
 
 
+app.get('/driver', function(request, response) {
+  response.render('pages/driver');
+});
+
+
+
+
       
 app.post('/uploadFile', function(req, res){
   var form = new formidable.IncomingForm();
@@ -53,6 +60,7 @@ app.post('/uploadFile', function(req, res){
       var userId = fields.userId?fields.userId:"1";
       var topic = fields.topic?fields.topic:"";
       var year = fields.year?fields.year:"2019";
+      var views = fields.views?fields.views:0;
       var mst = fields.mst?fields.mst:[];
       console.log(parents);
       var fileMetadata = {
@@ -117,7 +125,7 @@ app.get('/getResults', function(req,res){
         auth: jwt,
         q: "mimeType!='application/vnd.google-apps.folder' " + parents,
    //     q: "properties has { key='subject' and value=''}",
-        fields: "files(name, id, properties, createdTime, webViewLink)"
+        fields: "files(name, id, properties, createdTime, webViewLink), nextPageToken"
       },
       (err, result) => {
         if(err) {
@@ -125,7 +133,7 @@ app.get('/getResults', function(req,res){
           res.end('Some error occured');
         }
         else
-        res.end(JSON.stringify({files: result.data.files}));
+        res.end(JSON.stringify({files: result.data.files, nextPageToken: result.data.nextPageToken}));
       }
     );
   });
@@ -155,11 +163,12 @@ app.get('/admin', function(request, response) {
 
 app.get('/fileList', function(req, res){
   var parent = req.query.parent?req.query.parent:'root';
+  
   jwt.authorize((err, response) => {
     google.drive('v3').files.list(
       {
         auth: jwt,
-        q: "mimeType!='application/vnd.google-apps.folder' and '"+parent+"' in parents"
+        q: "mimeType!='application/vnd.google-apps.folder'"
       },
       (err, result) => {
         if(err) res.end(err);

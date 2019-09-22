@@ -100,6 +100,7 @@
             {{file.name}}
             {{file.properties}}
         </div>
+        <button ng-if="files.length > 0" class="btn btn-success" ng-click="nextPage()">Next</button>
     </div>
 </div>
 
@@ -139,6 +140,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
     var app = angular.module("lh", []);
     app.controller("myCtrl", function($scope, $http) {
         $scope.files = [];
+        $scope.nextPageToken = null;
         $scope.getResults = function(){
             var sem = $scope.sem;
             var branch = $scope.branch;
@@ -147,8 +149,20 @@ hs.src = ('//s10.histats.com/js15_as.js');
             $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type).then(function(res){            
                 var files = res.data.files;
                 $scope.files = files;
-                console.log(files);
+                $scope.nextPageToken = res.data.nextPageToken;
+                console.log(res.data);
             });
+        }
+
+        $scope.nextPage = function(){
+            if($scope.nextPageToken){
+                $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type+"nextPageToken="+$scope.nextPageToken).then(function(res){
+                    var files = res.data.files;
+                    $scope.files = files;
+                    $scope.nextPageToken = res.data.nextPageToken;
+                    console.log(res.data);  
+                });
+            }
         }
 
         $scope.redirect = function(link){
@@ -176,6 +190,7 @@ $('.nav-item').mouseout(function(){
 
 let red = 0, green =0, blue = 0;
 let col = "white";
+
 function changed(col, elem){
     console.log("CHanged");
     switch(col){
