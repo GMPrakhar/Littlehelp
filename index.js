@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var formidable = require('formidable');
-var session = require('express-session');
 const { google } = require('googleapis')
 const key = require("./credentials.json");
 const scopes = 'https://www.googleapis.com/auth/drive';
@@ -12,10 +11,6 @@ const jwt = new google.auth.JWT(
   key.private_key,
   scopes
 );
-
-app.use(session({secret: 'sess1207'}));
-app.use(express.json());     
-app.use(express.urlencoded());
 let drive = google.drive('v3');
 
 
@@ -36,19 +31,20 @@ app.get('/', function(request, response) {
 });
 
 app.get('/upload', function(request, response) {
-  if(!request.session.user){
-    response.render('pages/signin');
-  }else
   response.render('pages/upload');
 });
 
 
 app.get('/study', function(request, response) {
-  if(!request.session.user){
-    response.render('pages/signin');
-  }else
   response.render('pages/study');
 });
+
+
+app.get('/driver', function(request, response) {
+  response.render('pages/driver');
+});
+
+
 
 
       
@@ -59,13 +55,23 @@ app.post('/uploadFile', function(req, res){
       if(fields.sem != "any") parents.push(fields.sem);
       if(fields.branch != "any") parents.push(fields.branch);
       if(fields.type != "any") parents.push(fields.type);
+      var subject = fields.subject?fields.subject:"";
+      var uploader = fields.uploader?fields.uploader:"Littlehelp Team";
+      var userId = fields.userId?fields.userId:"1";
+      var topic = fields.topic?fields.topic:"";
+      var year = fields.year?fields.year:"2019";
+      var views = fields.views?fields.views:0;
+      var mst = fields.mst?fields.mst:[];
       console.log(parents);
       var fileMetadata = {
         'name': files.filetoupload.name,
         parents: parents,
-        properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: "Littlehelp Team"}
+        properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: uploader,
+        subject: subject, userId: userId, topic: topic, year: year, views: 0, mst: mst
+      }
         
       };
+      
       var media = {
         mimeType: files.filetoupload.type,
         body: fs.createReadStream(files.filetoupload.path)
@@ -73,16 +79,6 @@ app.post('/uploadFile', function(req, res){
 
 
       jwt.authorize((err, response) => {
-       /* google.drive('v3').files.list(
-          {
-            auth: jwt,
-          },
-          (err, result) => {
-            console.log(err);
-            console.log(result.data.files);
-          }
-        );
-      */
         
       drive.files.create({
         auth: jwt,
@@ -92,7 +88,6 @@ app.post('/uploadFile', function(req, res){
       }, function (err2, file) {
         if (err2) {
           // Handle error
-          res.end("some err occured");
           console.error(err2);
         } else {
           console.log('Uploaded File Id: ', file);
@@ -129,7 +124,8 @@ app.get('/getResults', function(req,res){
       {
         auth: jwt,
         q: "mimeType!='application/vnd.google-apps.folder' " + parents,
-        fields: "files(name, id, properties, createdTime, webViewLink)"
+   //     q: "properties has { key='subject' and value=''}",
+        fields: "files(name, id, properties, createdTime, webViewLink), nextPageToken"
       },
       (err, result) => {
         if(err) {
@@ -137,18 +133,11 @@ app.get('/getResults', function(req,res){
           res.end('Some error occured');
         }
         else
-        res.end(JSON.stringify({files: result.data.files}));
+        res.end(JSON.stringify({files: result.data.files, nextPageToken: result.data.nextPageToken}));
       }
     );
   });
 });
-
-
-app.post('/userSignedIn', function(req, res){
-  req.session.user = req.body.user;
-  res.end("Signed In");
-});
-
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
@@ -174,11 +163,12 @@ app.get('/admin', function(request, response) {
 
 app.get('/fileList', function(req, res){
   var parent = req.query.parent?req.query.parent:'root';
+  
   jwt.authorize((err, response) => {
     google.drive('v3').files.list(
       {
         auth: jwt,
-        q: "mimeType!='application/vnd.google-apps.folder' and '"+parent+"' in parents"
+        q: "mimeType!='application/vnd.google-apps.folder'"
       },
       (err, result) => {
         if(err) res.end(err);

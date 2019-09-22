@@ -10,8 +10,7 @@
         <center><h4>File Upload</h4></center><br>
         <form class="form-group upload-form" method="POST" enctype="multipart/form-data" action="/uploadFile">
                 <label for="semm">Semester: </label>
-                <select class="form-control" id="semm" name="sem" onchange="$('#sem').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="semm" name="sem" required>
                     <option>I Year</option>
                     <option>III</option>
                     <option>IV</option>
@@ -21,8 +20,7 @@
                     <option>VIII</option>
                 </select>
                 <label for="branchm">Branch: </label>
-                <select class="form-control" id="branchm" name="branch" onchange="$('#branch').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="branchm" name="branch" required>
                     <option>CS</option>
                     <option>IT</option>
                     <option>ETC</option>
@@ -31,17 +29,49 @@
                     <option>Civil</option>
                 </select>
                 <label for="typem">Type: </label>
-                <select class="form-control" id="typem" name="type" onchange="$('#type').val($(this).children('option:selected').html())">
-                    <option value="any">Any</option>
+                <select class="form-control" id="typem" name="type" required>
                     <option>Notes</option>
                     <option>Question Papers</option>
                     <option>Books</option>
                     <option>Other</option>
+                </select>
+
+                <label for="year">Year: </label>
+                <select class="form-control" id="year" name="year" required>
+                    <option value=""><%= new Date().getFullYear(); %></option>
+                    <option><%= new Date().getFullYear() -1; %></option>
+                    <option><%= new Date().getFullYear() -2; %></option>
+                    <option><%= new Date().getFullYear() -3; %></option>
+                    <option><%= new Date().getFullYear() -4; %></option>
+                </select>
+
+                <label for="subject">Subject: </label>
+                <select class="form-control" id="subject" name="subject" required>
+                    <option value=""><%= new Date().getFullYear(); %></option>
+                    <option><%= new Date().getFullYear() -1; %></option>
+                    <option><%= new Date().getFullYear() -2; %></option>
+                    <option><%= new Date().getFullYear() -3; %></option>
+                    <option><%= new Date().getFullYear() -4; %></option>
                 </select><br>
+                <div class="">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" value="MST1" name="mst">
+                    <label class="custom-control-label" for="customCheck1">MST 1</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2" value="MST2" name="mst">
+                    <label class="custom-control-label" for="customCheck2">MST 2</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" value="MST3" name="mst">
+                    <label class="custom-control-label" for="customCheck3">MST 3</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4" value="END" name="mst">
+                    <label class="custom-control-label" for="customCheck4">End Sem</label>
+                  </div>
+                </div>  <br>
                 <input type="file" class="form-control" name="filetoupload"><br>
-                <input type="hidden" id="sem" name="actsem" value="I Year">
-                <input type="hidden" id="branch" name="actbr" value="CS">
-                <input type="hidden" id="type" name="acttype" value="Notes">
                 <button type="submit" class="btn btn-primary btn-md btn-block study-btn" >Submit</button>
               </form>
     </div>
@@ -57,16 +87,16 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?3693901&101" alt="free counter statistics" border="0"></a></noscript>
-<!-- Histats.com  END  -->
 
 <script>
-  //--------------Value of options = Folder Id of all google drive folders -----------------------
   var drive_arr = ["12JTuWJqxB4XwK-3XcSnXFYP2Zrl8SAjU", "1XROM3Wj6mHAEeLPq3aznqICfU0rpPZMY", "1AP6o61I12drcbGLIHTkogX-1T9qIMghf", "1rfBVBb-X26w4Wohdc2nj1TbWAbt_68n5", "1ZMZ9op4Q1fw2_1WMCVckqhzgRkoAgPTr", "1TKqtiaNTvOhEhTtw6_1FH3JIzqVlXiL3",
    "1Zbywe2z39Ab8wu8Rt02aoXK1jJrrQmaO", "1yJJzCbIPitG3UFLr1t1VeMiBb2NS2015", "1tY6_-K9oFfy4I_3pafvwlyzA0-LRZb1p", "1VGk1uBxuYoyy05jnwlIvwh_sJskNWBc0",
    "1vZIgq_0MthVpHbTyrV8cPAe1gKoXcSBv", "1kEGQ7NFBsbsgFV_LXVCeBBC2gWjQXtpw", "1w1eX1iWTx8RCr7XfSK51ixP4HNl29goE", "1PDpLm3Pm90txBbJL8hyF7i9m8QxVj5Vv", "1fMSz9gQHmJ_cVfcaCeWMWNw7k-L1ZnWf", "1feA5FBQsnvhwYNIch6awiGeK-ABwQc0m", "19jzGpg8aBR8xFluK-ot54hNhQSVJ2Yia"];
         $('.current').removeClass('current');
         $('.nav-item:nth-of-type(3)').addClass('current');
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
     var count =  16;
     $('#semm option').each((ind, elem)=>{
       if(ind!=0) 
@@ -80,15 +110,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
       if(ind!=0)
       $(elem).attr('value',drive_arr[count--]);
     });
-   
-   
-   //------------------- Used to move the underline marker in the navigation bar ----------------------
-    var left = $('.current').offset().left + 10;
-    var width = $('.current').width();
-    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
-   
-
-    $('.nav-item').mouseover(function(){
+$('.nav-item').mouseover(function(){
   var left = $(this).offset().left + 10;
   var width = $(this).width();
   $('#marker').stop().animate( {  left: left, width: width  }, 500 );
