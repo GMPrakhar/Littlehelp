@@ -106,6 +106,8 @@ app.post('/uploadFile', function(req, res){
 app.get('/getResults', function(req,res){
   var parents = " and";
   var fields = req.query;
+  var token = req.query.nextPageToken;
+  token = token=='undefined'?null:token;
       if(fields.sem != 'undefined' && fields.sem != "any"){
         parents += " '"+fields.sem + "' in parents ";
       }
@@ -124,6 +126,7 @@ app.get('/getResults', function(req,res){
       {
         auth: jwt,
         q: "mimeType!='application/vnd.google-apps.folder' " + parents,
+        pageToken: token,
    //     q: "properties has { key='subject' and value=''}",
         fields: "files(name, id, properties, createdTime, webViewLink), nextPageToken"
       },

@@ -100,7 +100,11 @@
             {{file.name}}
             {{file.properties}}
         </div>
-        <button ng-if="files.length > 0" class="btn btn-success" ng-click="nextPage()">Next</button>
+        
+    </div>
+    <div class="row">
+        <div class="col-6"><button ng-if="files.length > 0 && pageTokens.length !=1" class="btn btn-success" ng-click="prevPage()">Prev</button></div>
+        <div class="col-6"><button ng-if="files.length > 0 && nextPageToken" class="btn btn-success" ng-click="nextPage()">Next</button></div>
     </div>
 </div>
 
@@ -140,7 +144,8 @@ hs.src = ('//s10.histats.com/js15_as.js');
     var app = angular.module("lh", []);
     app.controller("myCtrl", function($scope, $http) {
         $scope.files = [];
-        $scope.nextPageToken = null;
+        $scope.nextPageToken = true;
+        $scope.pageTokens = [];
         $scope.getResults = function(){
             var sem = $scope.sem;
             var branch = $scope.branch;
@@ -149,20 +154,46 @@ hs.src = ('//s10.histats.com/js15_as.js');
             $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type).then(function(res){            
                 var files = res.data.files;
                 $scope.files = files;
-                $scope.nextPageToken = res.data.nextPageToken;
+                $scope.pageTokens.push(res.data.nextPageToken);
                 console.log(res.data);
             });
         }
 
         $scope.nextPage = function(){
-            if($scope.nextPageToken){
-                $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type+"nextPageToken="+$scope.nextPageToken).then(function(res){
+                var sem = $scope.sem;
+            var branch = $scope.branch;
+            var type = $scope.type;
+            var npt = $scope.pageTokens[$scope.pageTokens.length-1];
+            console.log(npt);
+                $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type+"&nextPageToken="+npt).then(function(res){
                     var files = res.data.files;
                     $scope.files = files;
-                    $scope.nextPageToken = res.data.nextPageToken;
                     console.log(res.data);  
+                    if(res.data.nextPageToken==null){
+                        $scope.nextPageToken = false;
+                    }
+                    else $scope.pageTokens.push(res.data.nextPageToken);
+                
                 });
-            }
+            
+        }
+
+
+        $scope.prevPage = function(){
+                var sem = $scope.sem;
+            var branch = $scope.branch;
+            var type = $scope.type;
+            if($scope.nextPageToken) $scope.pageTokens.pop();
+            $scope.pageTokens.pop();
+            var npt = $scope.pageTokens[$scope.pageTokens.length-1];
+                $http.get('getResults?sem='+sem+"&branch="+branch+"&type="+type+"&nextPageToken="+npt).then(function(res){
+                    var files = res.data.files;
+                    $scope.nextPageToken = true;
+                    $scope.files = files;
+                    console.log(res.data);  
+                    $scope.pageTokens.push(res.data.nextPageToken);
+                });
+            
         }
 
         $scope.redirect = function(link){
