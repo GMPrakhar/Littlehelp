@@ -44,8 +44,13 @@ app.get('/driver', function(request, response) {
   response.render('pages/driver');
 });
 
+app.get('/signin', function(request,response){
+	response.render('pages/signin');
+});
 
-
+app.post('signin', function(request,response){
+	// Manage Authentication With JWT
+});
 
       
 app.post('/uploadFile', function(req, res){
