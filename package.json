@@ -13,7 +13,6 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.17.1",
-    "express-session": "^1.16.2",
     "formidable": "^1.2.1",
     "googleapis": "^39.2.0",
     "jsonwebtoken": "^8.5.1"

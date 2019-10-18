@@ -22,7 +22,8 @@ If you want to make changes to the backend of the project, then you need to firs
 5. Now you can make use of the http://localhost:5000/admin panel to create and delete folders.
 6. First you need to use the 'enableViewPermission' in index.js method to be able to upload files to gdrive.
 
-- For further Details contact
-[Prakhar Londhe](https://github.com/GMPrakhar)
+- For further Details contact:
+
+[Prakhar Londhe](https://github.com/GMPrakhar) or [Govind Choudhary](https://github.com/gogillu)
 
 #### You are ready to contribute!
