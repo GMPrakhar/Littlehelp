@@ -44,8 +44,13 @@ app.get('/driver', function(request, response) {
   response.render('pages/driver');
 });
 
+app.get('/signin', function(request,response){
+	response.render('pages/signin');
+});
 
-
+app.post('signin', function(request,response){
+	// Manage Authentication With JWT
+});
 
       
 app.post('/uploadFile', function(req, res){
@@ -67,7 +72,7 @@ app.post('/uploadFile', function(req, res){
         'name': files.filetoupload.name,
         parents: parents,
         properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: uploader,
-        subject: subject, userId: userId, topic: topic, year: year, views: 0, mst: mst
+        subject: subject, userId: userId, topic: topic, year: year, views: views, mst: mst
       }
         
       };
@@ -106,6 +111,8 @@ app.post('/uploadFile', function(req, res){
 app.get('/getResults', function(req,res){
   var parents = " and";
   var fields = req.query;
+  var token = req.query.nextPageToken;
+  token = token=='undefined'?null:token;
       if(fields.sem != 'undefined' && fields.sem != "any"){
         parents += " '"+fields.sem + "' in parents ";
       }
@@ -124,6 +131,7 @@ app.get('/getResults', function(req,res){
       {
         auth: jwt,
         q: "mimeType!='application/vnd.google-apps.folder' " + parents,
+        pageToken: token,
    //     q: "properties has { key='subject' and value=''}",
         fields: "files(name, id, properties, createdTime, webViewLink), nextPageToken"
       },
