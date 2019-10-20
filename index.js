@@ -97,8 +97,6 @@ app.post('/uploadFile', function(req, res){
       });
       });
 
-
-
       res.write('File uploaded');
       res.end();
     });

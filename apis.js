@@ -10,13 +10,31 @@ let db = admin.firestore();
 
 var p = 10;
 
+function deleteUser(userEmail){
+    let userRef = db.collection('users').doc(userEmail).delete();
+
+    msg = {};
+    msg.result = 'success';
+    msg.msg = userEmail+" successfully deleted.";
+    console.log(JSON.stringify(msg));
+}
+
 module.exports = function(app){
 
     app.get('/registerUser', function(req, res){
 
         var msg = {};
-        msg.data = req.query;
 
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
         /*
             expected req paramaeter key
             : usedID
@@ -57,7 +75,7 @@ module.exports = function(app){
 
         // check whether user already exists
         let usersRef = db.collection('users');
-        let query = usersRef.where('userEmail','==',req.query.userEmail)/*.where('userID','==',req.query.userID)*/.get()
+        let query = usersRef.where('userEmail','==',req.query.userEmail).get()
         .then(snapshot => {
             if(snapshot.empty){
 
@@ -133,8 +151,46 @@ module.exports = function(app){
         });
     });
 
+    // Update user details
+    app.get('/updateUser', function(req,res){
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+        req.query.userID = "";
+        delete req.query.userID;
+
+        let docRef = db.collection("users").doc(req.query.userEmail);
+        let updateSingle = docRef.update(req.query);
+
+        console.log(req.query);
+
+        msg.update = req.query;
+        msg.result = "success";
+
+        res.write(JSON.stringify(msg));
+        res.end();
+    });
+
+    // Delete a Particular User
     app.get('/deleteUser', function(req, res){
-        var msg = {};
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
         msg.data = req.query;
         paramList = [{'userEmail':'required'}];
 
@@ -162,10 +218,49 @@ module.exports = function(app){
         res.end();
     });
 
+    // Delete All Users at once
     app.get('/deleteAllUsers', function(req, res){
-        console.log("warning all user documents are about to be deleted.");
+        msg = {};
 
-       res.end();
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        console.log("warning all user documents are about to be deleted.");
+        let userREF = db.collection("users").get()
+         .then(snapshot=>{
+             if(snapshot.empty){
+                msg.msg = "collection users is empty";
+                console.log(msg);
+                res.write(JSON.stringify(msg));
+                res.end();
+                return;
+             }
+
+             snapshot.forEach(doc=>{
+                deleteUser(doc.id);
+                console.log(doc.id+" deleted");
+             });
+
+             msg.msg = "All Users Successfully Deleted.";
+             msg.result = "success";
+             res.write(JSON.stringify(msg));
+             res.end();
+             return;
+
+         })
+         .catch(err => {
+            msg.msg = 'Error traversing users : ', err;
+            console.log(msg);
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        });
     });
 
     //other routes..
