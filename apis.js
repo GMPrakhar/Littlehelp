@@ -517,6 +517,7 @@ module.exports = function(app){
 
     });
 
+    // Search A Study Material
     app.get('/searchStudyMaterial', function(req,res){
         msg = {};
 
@@ -634,5 +635,65 @@ module.exports = function(app){
             return;
         });
 
+    });
+
+    app.get('/topContributors', function(req,res){
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.end(JSON.stringify(msg));
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
+
+        msg.contributors = {};
+        contributors = {};
+
+        let collRef = db.collection('studymaterial').get()
+         .then(snapshot => {
+            if(snapshot.empty){
+                msg.msg = "No Study Material in Database.";
+                msg.result = "Success";
+                res.end(JSON.stringify(msg));
+                return;
+            }
+
+            snapshot.forEach(doc => {
+                let currUserEmail = doc.data().userEmail;
+
+                if(contributors[currUserEmail] == null){
+                    contributors[currUserEmail] = 1;
+                }else{
+                    contributors[currUserEmail]++;
+                }
+                
+                //console.log(doc.id," ==> ",doc.data());
+            });
+
+            // Create items array
+            var items = Object.keys(contributors).map(function(key) {
+                return [key, contributors[key]];
+            });
+            
+            // Sort the array based on the second element
+            items.sort(function(first, second) {
+                return second[1] - first[1];
+            });
+
+            //console.log(items);
+            msg.contributors = items;
+            msg.result = "success";
+            res.end(JSON.stringify(msg));
+         })
+         .catch(err => {
+            msg.msg = "Some error while processing topContributors : "+err;
+            msg.result = "Success";
+            res.end(JSON.stringify(msg));
+            return;
+        });
     });
 }
