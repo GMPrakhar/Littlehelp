@@ -308,6 +308,7 @@ module.exports = function(app){
 
         paramList = [
             {'userEmail':'required'},
+            {'userName':'required'},
             {'sem':'required'},
             {'branch':'required'},
             {'type':'required'},
@@ -356,14 +357,39 @@ module.exports = function(app){
             req.query.views = 0;
         }
 
-        let docRef = db.collection('studymaterial').add(
-            req.query
-        ).then(ref=>{
-            msg.result = "success";
-            msg.materialID = ref.id;
-            res.end(JSON.stringify(msg));
-            return;
-        });
+        if(req.query.resourceType == "drive"){
+            let docRef = db.collection('studymaterial').doc("drive_"+req.query.resourceLocation).set(
+                req.query
+            ).then(ref=>{
+                msg.result = "success";
+                msg.materialID = ref.id;
+                res.end(JSON.stringify(msg));
+                return;
+            })
+            .catch(err => {
+                msg.result = "failure";
+                msg.msg = "some error occured while adding material on firestore : "+err;
+                res.end(JSON.stringify(msg));
+                return;
+            });    
+        }
+
+        if(req.query.resourceType == "url"){
+            let docRef = db.collection('studymaterial').add(
+                req.query
+            ).then(ref=>{
+                msg.result = "success";
+                msg.materialID = ref.id;
+                res.end(JSON.stringify(msg));
+                return;
+            })
+            .catch(err => {
+                msg.result = "failure";
+                msg.msg = "some error occured while adding material on firestore : "+err;
+                res.end(JSON.stringify(msg));
+                return;
+            });
+        }
         
     });
 
@@ -515,6 +541,30 @@ module.exports = function(app){
             {'materialName':'optional'}
         ];
 
+        // check whether api passed important parameters
+        for(var i=0; i<paramList.length; i++){
+            let k = Object.keys(paramList[i])[0];
+            let v = Object.values(paramList[i])[0];
+
+            //console.log("k = "+k+" v = "+v);
+            if(v == "optional") continue;
+            if(v == "required"){
+                var z = checkValidity(k,req.query[k],"false","",msg,paramList);
+                if(z.result == "failure"){
+                    z.extraInfo = extraInfo;
+                    res.end(JSON.stringify(z));
+                    return;
+                }
+            }else{
+                var z = checkValidity(k,req.query[k],"true",v,msg,paramList);
+                if(z.result == "failure"){
+                    z.extraInfo = extraInfo;
+                    res.end(JSON.stringify(z));
+                    return;
+                }
+            }
+        }
+
         msg.paramList = paramList;
 
         console.log("searchStudyMaterial : searching Study Material with following demand");
@@ -530,7 +580,7 @@ module.exports = function(app){
 
         }else if(req.query.searchDrive == "true" && req.query.searchMaterialWithURL == "false"){
             searchQuery = searchQuery.where("resourceType", '==' , "drive");
-
+            
         }
 
         if(req.query.sem != null){
