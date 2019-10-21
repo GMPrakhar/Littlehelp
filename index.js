@@ -13,10 +13,7 @@ const jwt = new google.auth.JWT(
 );
 let drive = google.drive('v3');
 
-
-
-
-
+var APIS = require('./apis')(app)
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -99,8 +96,6 @@ app.post('/uploadFile', function(req, res){
         }
       });
       });
-
-
 
       res.write('File uploaded');
       res.end();
