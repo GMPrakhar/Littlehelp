@@ -580,7 +580,7 @@ module.exports = function(app){
 
         }else if(req.query.searchDrive == "true" && req.query.searchMaterialWithURL == "false"){
             searchQuery = searchQuery.where("resourceType", '==' , "drive");
-            
+
         }
 
         if(req.query.sem != null){
@@ -602,7 +602,7 @@ module.exports = function(app){
             searchQuery = searchQuery.where("materialName", '==', req.query.materialName);
         }
 
-        let searchResult = searchQuery.get()
+        let searchResult = searchQuery/*.orderBy('views','desc').orderBy('timestamp','desc')*/.get()
          .then(snapshot => {
             if(snapshot.empty) {
                 msg.result = "success";
