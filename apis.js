@@ -491,4 +491,98 @@ module.exports = function(app){
 
     });
 
+    app.get('/searchStudyMaterial', function(req,res){
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
+        paramList = [
+            {'searchDrive':['true','false']},
+            {'searchMaterialWithURL':['true','false']},
+            {'sem':'optional'},
+            {'branch':'optional'},
+            {'type':'optional'},
+            {'subject':'optional'},
+            {'topic':'optional'},
+            {'materialName':'optional'}
+        ];
+
+        msg.paramList = paramList;
+
+        console.log("searchStudyMaterial : searching Study Material with following demand");
+        console.log(req.query);
+
+        let smRef = db.collection('studymaterial');
+        var searchQuery = smRef;
+
+        if(req.query.searchDrive == "true" && req.query.searchMaterialWithURL == "true"){
+            
+        }else if(req.query.searchDrive == "false" && req.query.searchMaterialWithURL == "true"){
+            searchQuery = searchQuery.where("resourceType", '==' , "url");
+
+        }else if(req.query.searchDrive == "true" && req.query.searchMaterialWithURL == "false"){
+            searchQuery = searchQuery.where("resourceType", '==' , "drive");
+
+        }
+
+        if(req.query.sem != null){
+            searchQuery = searchQuery.where("sem", '==' , req.query.sem);
+        }
+        if(req.query.branch != null){
+            searchQuery = searchQuery.where("branch", '==', req.query.branch);
+        }
+        if(req.query.type != null){
+            searchQuery = searchQuery.where("type", '==' , req.query.type);
+        }
+        if(req.query.subject != null){
+            searchQuery = searchQuery.where("branch", '==', req.query.subject);
+        }
+        if(req.query.topic != null){
+            searchQuery = searchQuery.where("topic", '==' , req.query.topic);
+        }
+        if(req.query.materialName != null){
+            searchQuery = searchQuery.where("materialName", '==', req.query.materialName);
+        }
+
+        let searchResult = searchQuery.get()
+         .then(snapshot => {
+            if(snapshot.empty) {
+                msg.result = "success";
+                msg.materialCount = 0;
+                msg.msg = "No Study Material Found with requested Query.";
+                console.log(msg.msg);
+                res.end(JSON.stringify(msg));
+                return;
+            }
+
+            msg.searchResult = [];
+            msg.materialCount = 0;
+            snapshot.forEach(doc => {
+                let m = doc.data();
+                m.studyMaterialID = doc.id;
+                console.log(doc.id, "==> ", m);
+                msg.searchResult.push(m);
+                msg.materialCount++;
+            });
+            msg.result = "success";
+            res.end(JSON.stringify(msg));
+            return;
+         })
+         .catch(err => {
+            msg.result = "failure";
+            msg.msg = "some error occured while performing the search : "+err;
+            console.log(msg.msg);
+            res.end(JSON.stringify(msg));
+            return;
+        });
+
+    });
 }
