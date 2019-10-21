@@ -19,8 +19,39 @@ function deleteUser(userEmail){
     console.log(JSON.stringify(msg));
 }
 
+function checkValidity(key, value, constraints, allowedValues, msg, paramList){
+
+    if(value == null){
+        msg.msg = "req Object has missing "+key+" parameter.";
+        console.log(msg.msg);
+        msg.result = 'failure';
+        msg.paramList = paramList;
+        return msg;
+    }
+
+    if(constraints == "true"){
+        var belong = 0;
+        for(var i=0; i<allowedValues.length; i++){
+            if(value == allowedValues[i]){
+                belong = 1;
+                break;
+            }
+        }
+        if(belong==0){
+            msg.msg = key+" in the req object contains the value ("+value+") that are not allowed.";
+            console.log(msg.msg);
+            msg.result = 'failure';
+            msg.paramList = paramList;
+            return msg;
+        }
+    }
+
+    return msg;
+}
+
 module.exports = function(app){
 
+    // Register Come User login
     app.get('/registerUser', function(req, res){
 
         var msg = {};
@@ -58,7 +89,7 @@ module.exports = function(app){
             console.log("req Object has missing userID parameter.");
             msg.result = 'failure';
             msg.login = "false";
-            msg.param = paramList;
+            msg.paramList = paramList;
             res.write(JSON.stringify(msg));
             res.end();
             return;
@@ -67,7 +98,7 @@ module.exports = function(app){
             console.log("req Object has missing userEmail parameter.");
             msg.result = 'failure';
             msg.login = "false";
-            msg.param = paramList;
+            msg.paramList = paramList;
             res.write(JSON.stringify(msg));
             res.end();
             return;
@@ -79,7 +110,7 @@ module.exports = function(app){
         .then(snapshot => {
             if(snapshot.empty){
 
-                let usersIDRef = db.collection('ussers');
+                let usersIDRef = db.collection('users');
                 let queryID = usersIDRef.where('userID','==',req.query.userID).get()
                 .then(snapshotID => {
                     if(snapshotID.empty){
@@ -194,24 +225,21 @@ module.exports = function(app){
         msg.data = req.query;
         paramList = [{'userEmail':'required'}];
 
-        console.log("deleteUse : following user about to be deleted");
+        console.log("deleteUser : following user about to be deleted");
         console.log(req.query);
 
         // check whether api passed with userEmail
         if(req.query.userEmail == null){
             console.log("req Object has missing userEmail parameter.");
             msg.result = 'failure';
-            msg.param = paramList;
+            msg.paramList = paramList;
             msg.msg;
             res.write(JSON.stringify(msg));
             res.end();
             return;
         }
 
-        msg.msg = "No user with userEmail "+req.query.userEmail+" exists.";
-
         let userRef = db.collection('users').doc(req.query.userEmail).delete();
-
         msg.result = 'success';
         msg.msg = req.query.userEmail+" successfully deleted.";
         res.write(JSON.stringify(msg));
@@ -263,5 +291,204 @@ module.exports = function(app){
         });
     });
 
-    //other routes..
+    // Add a Study Material
+    app.get('/addStudyMaterial', function(req, res){
+        var msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
+
+        paramList = [
+            {'userEmail':'required'},
+            {'sem':'required'},
+            {'branch':'required'},
+            {'type':'required'},
+            {'subject':'required'},
+            {'materialName':'required'},
+            {'topic':'optional'},
+            {'resourceType':['drive','url']},
+            {'resourceLocation':'required'},
+            {'timestamp':'required'},
+            {'views':'optional'}
+        ];
+
+        extraInfo = [
+            {'timestamp':'format(yyyy-mm-dd-HH:MM:SS)'},
+            {'sample_request':'http://localhost:5000/addStudyMaterial?passcode=passcode&userEmail=aa1&sem=1&branch=cs&type=notes&subject=ADA&materialName=pdf1.jpg&resourceType=url&resourceLocation=google.com&timestamp=2019-10-21-18-32-00'}
+        ];
+
+        console.log("addStudyMaterial : following studyMaterial upload request initiated : ");
+        console.log(req.query);
+
+        // check whether api passed important parameters
+        for(var i=0; i<paramList.length; i++){
+            let k = Object.keys(paramList[i])[0];
+            let v = Object.values(paramList[i])[0];
+
+            //console.log("k = "+k+" v = "+v);
+            if(v == "optional") continue;
+            if(v == "required"){
+                var z = checkValidity(k,req.query[k],"false","",msg,paramList);
+                if(z.result == "failure"){
+                    z.extraInfo = extraInfo;
+                    res.end(JSON.stringify(z));
+                    return;
+                }
+            }else{
+                var z = checkValidity(k,req.query[k],"true",v,msg,paramList);
+                if(z.result == "failure"){
+                    z.extraInfo = extraInfo;
+                    res.end(JSON.stringify(z));
+                    return;
+                }
+            }
+        }
+
+        if(req.query.views == null){
+            req.query.views = 0;
+        }
+
+        let docRef = db.collection('studymaterial').add(
+            req.query
+        ).then(ref=>{
+            msg.result = "success";
+            msg.materialID = ref.id;
+            res.end(JSON.stringify(msg));
+            return;
+        });
+        
+    });
+
+    // Increment View on Material
+    app.get('/incrementStudyMaterialViews', function(req,res){
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
+        paramList = [{'studyMaterialID':'required'}];
+
+        console.log("incrementStudyMaterialViews : checking and incrementing views for following material");
+        console.log(req.query);
+
+        // check whether api passed with userEmail
+        if(req.query.studyMaterialID == null){
+            console.log("req Object has missing studyMaterialID parameter.");
+            msg.result = 'failure';
+            msg.paramList = paramList;
+            msg.msg;
+            res.end(JSON.stringify(msg));
+            return;
+        }
+
+        let docRef = db.collection('studymaterial').doc(req.query.studyMaterialID);
+        let getDoc = docRef.get()
+         .then(doc=> {
+            if(!doc.exists){
+                msg.result = "failure";
+                msg.msg = "there doesn't exist any material with studyMaterialID : "+req.query.studyMaterialID;
+                res.end(JSON.stringify(msg));
+            }else{
+                let views = doc.data().views;
+                views++;
+                let updateDoc = docRef.update({
+                    'views' : views
+                });
+
+                msg.result = "success";
+                msg.studyMaterialID = doc.id;
+                msg.updatedMaterial = doc.data();
+                msg.updatedMaterial.views = views;
+                res.end(JSON.stringify(msg));
+                return;
+            }
+         })
+         .catch(err=> {
+            msg.result = "failure";
+            msg.msg = "some error occured while sending request to firestore : "+err;
+            res.end(JSON.stringify(msg));
+        });
+
+    });
+
+    // Update Study Material
+    app.get('/updateStudyMaterial', function(req,res){
+        msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+
+        msg.data = req.query;
+        paramList = [{'studyMaterialID':'required'}];
+
+        console.log("incrementStudyMaterialViews : checking and incrementing views for following material");
+        console.log(req.query);
+
+        // check whether api passed with userEmail
+        if(req.query.studyMaterialID == null){
+            console.log("req Object has missing studyMaterialID parameter.");
+            msg.result = 'failure';
+            msg.paramList = paramList;
+            msg.msg;
+            res.end(JSON.stringify(msg));
+            return;
+        }
+
+        let newUpdate = req.query;
+        let studyMaterialID = req.query.studyMaterialID;
+        delete newUpdate.studyMaterialID;
+        msg.data.studyMaterialID = studyMaterialID;
+
+        let docRef = db.collection('studymaterial').doc(studyMaterialID);
+        let updateStudyMaterial = docRef.update(
+            newUpdate
+        )
+         .then(doc => {
+            msg.result = "success";
+            msg.studyMaterialID = doc.id;
+            let updatedDoc = docRef.get()
+             .then(newdoc => {
+                console.log("doc.data() "+newdoc.data());
+                msg.updatedMaterial = newdoc.data();
+                msg.msg = "Study Material Updated Successfully.";
+                res.end(JSON.stringify(msg));
+                return;
+             })
+             .catch(err => {
+                msg.result = "failure";
+                msg.msg = "some error occured while fetching updated Study Material form firestore : "+err;
+                res.end(JSON.stringify(msg));
+                return;
+            });
+         })
+         .catch(err => {
+            msg.result = "failure";
+            msg.msg = "some error occured while sending request to firestore : "+err;
+            res.end(JSON.stringify(msg));
+            return;
+        });
+
+    });
+
 }
