@@ -650,7 +650,7 @@ module.exports = function(app){
 
         msg.data = req.query;
 
-        msg.contributors = {};
+        msg.contributors = [];
         contributors = {};
 
         let collRef = db.collection('studymaterial').get()
@@ -684,10 +684,52 @@ module.exports = function(app){
                 return second[1] - first[1];
             });
 
-            //console.log(items);
-            msg.contributors = items;
-            msg.result = "success";
-            res.end(JSON.stringify(msg));
+            var cArr = [];
+            var process = 0;
+            var itemMap = {};
+
+            for(var i=0; i<items.length; i++){
+                itemMap[items[i][0]] = i;
+                console.log(items[i][0]);
+                let userRef = db.collection('users').doc(items[i][0]).get()
+                 .then(doc =>{
+
+                    let cObj = {};
+                    cObj.contributorDetail = doc.data();
+                    cObj.contributorID = doc.id;
+
+                    var j=itemMap[doc.id];
+                    cObj.contributionCount = items[j][1];
+
+                    /*
+                    for(j=0; j<items.length; j++){
+                        if(doc.id == items[j][0]){
+                            break;
+                        }
+                    }
+
+                    if(j<items.length){
+                        cObj.contributionCount = items[j][1];
+                    }
+                    */
+
+                    console.log(cObj);
+                    cArr.push(cObj);
+                    process++;
+
+                    if(process == items.length){
+                        //console.log(items);
+                        msg.contributors = cArr;
+                        msg.result = "success";
+                        res.end(JSON.stringify(msg));
+                        return;
+                    }
+            
+                 })
+                 .catch(err =>{
+                    console.log("err => ",err);
+                });
+            }
          })
          .catch(err => {
             msg.msg = "Some error while processing topContributors : "+err;
