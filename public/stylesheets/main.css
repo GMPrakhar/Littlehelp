@@ -158,17 +158,22 @@ option{
 
 .filer{
   padding: 20px;
-  background: #AA6D00;
+  background: #4CAF50;
   color: white;
   margin: 20px 40px;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.filer:nth-child(3n+1){
-  margin-left: 80px;
+
+
+.file-enc{
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 600px){
+ 
+
 
   #marker{
     display: none;
@@ -208,4 +213,11 @@ option{
   background: transparent;
   margin-left: 0px;
 }
+}
+
+@media only screen and (min-width: 600px){
+
+  .filer:nth-child(3n+1){
+    margin-left: 80px;
+  }
 }
