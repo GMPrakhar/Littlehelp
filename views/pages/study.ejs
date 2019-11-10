@@ -77,7 +77,9 @@
                     <option>Other</option>
             </select>
         </div>
-    <!--  <div class="col-md-4 col-xs-12">
+    <!--  Uncomment this if you want to play with the colours of the tiles ------
+
+         <div class="col-md-4 col-xs-12">
            <input type="range" oninput="changed('red', this)" min="0" max="255" value="0">
         </div>
         <div class="col-md-4 col-xs-12">
@@ -95,7 +97,7 @@
         </div>
     </div>-->  
     <div class="row file-enc">
-        <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files" class="studyFile" ng-click="redirect(file.webViewLink)">
+        <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files" class="studyFile" ng-click="redirect(file.webViewLink, file.id, file.properties.views)">
            
             <span><b>Type:</b> {{file.properties.type == "QUEST"?"Question Paper":
                 (file.properties.type == "NOTES"?"Notes":(
@@ -206,8 +208,14 @@ hs.src = ('//s10.histats.com/js15_as.js');
             
         }
 
-        $scope.redirect = function(link){
+        $scope.redirect = function(link, id, views){
+           $http.get('updateViews?fileId='+id+'&currentViews='+views).then(function(){
+               
+           }).catch(function(){
+
+           });
             location.href = link;
+         //  console.log(link, id);
         }
     });
 
