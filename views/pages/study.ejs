@@ -220,7 +220,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
         }
 
         $scope.intviews = function(file){
-            return [parseInt(file.properties.year), -parseInt(file.properties.views)];
+            return [-parseInt(file.properties.views)];
         }
     });
 
