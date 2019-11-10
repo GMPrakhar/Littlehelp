@@ -77,7 +77,7 @@
                     <option>Other</option>
             </select>
         </div>
-        <div class="col-md-4 col-xs-12">
+    <!--  <div class="col-md-4 col-xs-12">
            <input type="range" oninput="changed('red', this)" min="0" max="255" value="0">
         </div>
         <div class="col-md-4 col-xs-12">
@@ -93,12 +93,22 @@
         <div class="col-md-4 col-xs-12">
                 <button class="btn btn-info" onclick="toggle()">Toggle Font Color (W/B)</button>
         </div>
-    </div>
+    </div>-->  
     <div class="row file-enc">
         <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files" class="studyFile" ng-click="redirect(file.webViewLink)">
-            <span>{{file.properties.sem}} {{file.properties.branch}} {{file.properties.type}}</span>
-            {{file.name}}
-            {{file.properties}}
+           
+            <span><b>Type:</b> {{file.properties.type == "QUEST"?"Question Paper":
+                (file.properties.type == "NOTES"?"Notes":(
+                    file.properties.type == "BOOKS"?"Book":"Others"
+                )) }}</span><br>
+            <span><b>Semester:</b> {{file.properties.sem}}</b></span><br>
+            <span><b>Subject:</b> {{file.properties.subject}}</b></span><br>
+            <span><b>File name:</b> {{file.name}}</span><br>
+            <span><b>Midsem/Endsem :</b> {{file.properties.mst}}</span><br>
+            <span><b>Uploaded By :</b> {{file.properties.uploader}}</span><br>
+            
+            <span><b>Views :</b> {{file.properties.views}}</b></span>
+          <!--{{file.properties}}-->
         </div>
         
     </div>
