@@ -97,7 +97,7 @@
         </div>
     </div>-->  
     <div class="row file-enc">
-        <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files" class="studyFile" ng-click="redirect(file.webViewLink, file.id, file.properties.views)">
+        <div class="col-md-3 col-xs-12 filer" ng-repeat="file in files | orderBy : intviews" class="studyFile" ng-click="redirect(file.webViewLink, file.id, file.properties.views)">
            
             <span><b>Type:</b> {{file.properties.type == "QUEST"?"Question Paper":
                 (file.properties.type == "NOTES"?"Notes":(
@@ -105,6 +105,7 @@
                 )) }}</span><br>
             <span><b>Semester:</b> {{file.properties.sem}}</b></span><br>
             <span><b>Subject:</b> {{file.properties.subject}}</b></span><br>
+            <span><b>Year:</b> {{file.properties.year}}</b></span><br>
             <span><b>File name:</b> {{file.name}}</span><br>
             <span><b>Midsem/Endsem :</b> {{file.properties.mst}}</span><br>
             <span><b>Uploaded By :</b> {{file.properties.uploader}}</span><br>
@@ -114,10 +115,10 @@
         </div>
         
     </div>
-    <div class="row">
+  <!--  <div class="row">
         <div class="col-6"><button ng-if="files.length > 0 && pageTokens.length !=1" class="btn btn-success" ng-click="prevPage()">Prev</button></div>
         <div class="col-6"><button ng-if="files.length > 0 && nextPageToken" class="btn btn-success" ng-click="nextPage()">Next</button></div>
-    </div>
+    </div>-->
 </div>
 
 </body>
@@ -216,6 +217,10 @@ hs.src = ('//s10.histats.com/js15_as.js');
            });
             location.href = link;
          //  console.log(link, id);
+        }
+
+        $scope.intviews = function(file){
+            return [parseInt(file.properties.year), -parseInt(file.properties.views)];
         }
     });
 
