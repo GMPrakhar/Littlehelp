@@ -13,10 +13,7 @@ const jwt = new google.auth.JWT(
 );
 let drive = google.drive('v3');
 
-
-
-
-
+var APIS = require('./apis')(app)
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -44,8 +41,13 @@ app.get('/driver', function(request, response) {
   response.render('pages/driver');
 });
 
+app.get('/signin', function(request,response){
+	response.render('pages/signin');
+});
 
-
+app.post('signin', function(request,response){
+	// Manage Authentication With JWT
+});
 
       
 app.post('/uploadFile', function(req, res){
@@ -94,8 +96,6 @@ app.post('/uploadFile', function(req, res){
         }
       });
       });
-
-
 
       res.write('File uploaded');
       res.end();
