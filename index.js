@@ -92,7 +92,7 @@ app.post('/uploadFile', function(req, res){
           // Handle error
           console.error(err2);
         } else {
-          console.log('Uploaded File Id: ', file);
+          //console.lo('Uploaded File Id: ', file);
         }
       });
       });
@@ -100,6 +100,24 @@ app.post('/uploadFile', function(req, res){
       res.write('File uploaded');
       res.end();
     });
+});
+
+
+app.get('/updateViews', function(req, res){
+  let views = parseInt(req.query.currentViews);
+  let fileId = req.query.fileId;
+  console.log(views);
+  jwt.authorize((err, response) => {
+    google.drive('v3').files.update({
+      auth: jwt,
+      fileId: fileId,
+      resource: {properties: {views: views+1}}
+    }, (err, result)=>{
+      if(err) console.log(err);
+      console.log(result);
+      res.end();
+    });
+  });
 });
 
 
@@ -119,7 +137,7 @@ app.get('/getResults', function(req,res){
         if(parents != " and") parents += "and ";
         parents += " '"+fields.type + "' in parents ";
       }
-      console.log(parents);
+      //console.lo(parents);
       if(parents==" and") parents = "";
   jwt.authorize((err, response) => {
     google.drive('v3').files.list(
@@ -238,7 +256,7 @@ app.get('/createFolder', function(req, res){
       // Handle error
       console.error(err2);
     } else {
-      console.log('Created Id: ', file);
+      //console.lo('Created Id: ', file);
       res.end(file.id);
     }
   });
