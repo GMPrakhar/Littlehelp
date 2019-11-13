@@ -61,19 +61,30 @@ app.post('/uploadFile', function(req, res){
       var uploader = fields.uploader?fields.uploader:"Littlehelp Team";
       var userId = fields.userId?fields.userId:"1";
       var topic = fields.topic?fields.topic:"";
-      var year = fields.year?fields.year:"2019";
+      var year = fields.year?fields.year:new Date().getFullYear().toString();
       var views = fields.views?fields.views:0;
-      var mst = fields.mst?fields.mst:[];
-      console.log(parents);
+      var material_name = fields.material_name?fields.material_name:files.filetoupload.name;
+      var mst = [];
+      if(fields.mst1) mst.push(fields.mst1);
+      if(fields.mst2) mst.push(fields.mst2);
+      if(fields.mst3) mst.push(fields.mst3);
+      if(fields.end) mst.push(fields.end);
+      mst = mst.toString();
+
+      console.log(fields);
+
+      var timestamp = fields.timestamp?fields.timestamp:"Unknown";
       var fileMetadata = {
         'name': files.filetoupload.name,
         parents: parents,
         properties: {sem: fields.actsem, branch: fields.actbr, type: fields.acttype, uploader: uploader,
-        subject: subject, userId: userId, topic: topic, year: year, views: views, mst: mst
+        subject: subject, userId: userId, topic: topic, year: year, views: views, mst: mst,
+        material_name: material_name, timestamp: timestamp
       }
         
       };
       
+      console.log(fileMetadata);
       var media = {
         mimeType: files.filetoupload.type,
         body: fs.createReadStream(files.filetoupload.path)
@@ -91,19 +102,39 @@ app.post('/uploadFile', function(req, res){
         if (err2) {
           // Handle error
           console.error(err2);
+          res.end('There was some problem with the upload, please try again later');
         } else {
-          console.log('Uploaded File Id: ', file);
+      //    console.log('Uploaded File Id: ', file);
+          res.write('File uploaded');
+          res.end();
         }
       });
       });
 
-      res.write('File uploaded');
-      res.end();
     });
 });
 
 
+app.get('/updateViews', function(req, res){
+  let views = parseInt(req.query.currentViews);
+  let fileId = req.query.fileId;
+  console.log(views);
+  jwt.authorize((err, response) => {
+    google.drive('v3').files.update({
+      auth: jwt,
+      fileId: fileId,
+      resource: {properties: {views: views+1}}
+    }, (err, result)=>{
+      if(err) console.log(err);
+      console.log(result);
+      res.end();
+    });
+  });
+});
+
+
 app.get('/getResults', function(req,res){
+  console.log(req.query);
   var parents = " and";
   var fields = req.query;
   var token = req.query.nextPageToken;
@@ -119,7 +150,7 @@ app.get('/getResults', function(req,res){
         if(parents != " and") parents += "and ";
         parents += " '"+fields.type + "' in parents ";
       }
-      console.log(parents);
+      //console.lo(parents);
       if(parents==" and") parents = "";
   jwt.authorize((err, response) => {
     google.drive('v3').files.list(
@@ -238,7 +269,7 @@ app.get('/createFolder', function(req, res){
       // Handle error
       console.error(err2);
     } else {
-      console.log('Created Id: ', file);
+      //console.lo('Created Id: ', file);
       res.end(file.id);
     }
   });
