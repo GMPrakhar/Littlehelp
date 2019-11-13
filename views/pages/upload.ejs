@@ -50,17 +50,17 @@
                 </select>
 
                 <label for="subject">Subject: </label>
-                <select class="form-control" id="subject" name="subject" required>
+                <select class="form-control" id="subject" name="subject">
                    
                 </select>
                 
                 <label for="topic">Topic: </label>
-                <select class="form-control" id="topic" name="topic" required>
+                <select class="form-control" id="topic" name="topic"  >
                    
                 </select><br>
 
                 <label for="name">Name: </label>
-                <input type="text" id="name" placeholder="Optional">
+                <input type="text" id="name" name="material_name" placeholder="Optional">
                 <div class="">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1" value="MST1" name="mst1">
@@ -81,9 +81,9 @@
                 </div>  <br>
                 <input type="file" class="form-control" name="filetoupload"><br>
 
-                <input type="hidden" id="actsem" name="actsem">
-                <input type="hidden" id="actbr" name="actbr">
-                <input type="hidden" id="acttype" name="acttype">
+                <input type="hidden" id="actsem" name="actsem" value="any">
+                <input type="hidden" id="actbr" name="actbr" value="any">
+                <input type="hidden" id="acttype" name="acttype" value="any">
                 <button type="submit" class="btn btn-primary btn-md btn-block study-btn" style="margin-top: 50px;" >Submit</button>
               </form>
     </div>
@@ -163,7 +163,8 @@ function filterSubject(from, elem){
 
     if(bvalue=='ETC') bvalue = "TC";
     if(from=='sem'){
-      $('#actsem').val(svalue)
+      $('#actsem').val(svalue);
+      console.log(svalue);
     }else if(from=='branch') $('#actbr').val(bvalue);
     else{
       var tval = $('#typem option:selected').text();

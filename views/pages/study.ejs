@@ -107,7 +107,7 @@
                         )
                     )) }}</span><br> -->
             <span><b>Semester:</b> {{file.properties.sem}}</b></span><br>
-            <span><b>Subject:</b> {{file.properties.subject}}</b></span><br>
+            <span><b>Subject:</b> {{file.properties.subject==""?"All":file.properties.subject}}</b></span><br>
             <span><b>Year:</b> {{file.properties.year}}</b></span><br>
             <span><b>File name:</b> {{file.properties.material_name}}</span><br>
             <span><b>Midsem/Endsem :</b> {{file.properties.mst}}</span><br>

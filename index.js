@@ -70,6 +70,9 @@ app.post('/uploadFile', function(req, res){
       if(fields.mst3) mst.push(fields.mst3);
       if(fields.end) mst.push(fields.end);
       mst = mst.toString();
+
+      console.log(fields);
+
       var timestamp = fields.timestamp?fields.timestamp:"Unknown";
       var fileMetadata = {
         'name': files.filetoupload.name,
