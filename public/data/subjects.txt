@@ -1,0 +1,4153 @@
+[
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "EXCEPTION HANDLING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "POLYMORPHISM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "CLASSES & OBJECTS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "INHERITANCE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "OOPS - INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "NUMERICAL SOLUTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "INTERPOLATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "CORELATION & REGRESSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "TESTING OF HYPOTHESIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "RANDOM PROCESS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "MULTITHREADING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "APPLETS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "EVENT HANDLING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "JAVA",
+        "topic": "JAVA I/O",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "ARRAY & LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "SORTING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "LINKED LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "STACKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "QUEUE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "HASHING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "TREE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DATA STRUCTURE",
+        "topic": "GRAPH",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "CONVERSIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "LOGIC FAMILIES",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COMBINATIONAL CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "FLIP FLOPS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COUNTER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "REGISTERS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "SIGNAL CONVERSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "IC-555 ",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "MICROPROCESSOR",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "COA",
+        "topic": "COA - BASICS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "COA",
+        "topic": "MEMORY SYSTEM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "COA",
+        "topic": "PROCESSING UNIT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "COA",
+        "topic": "I/O ORGANISATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "COA",
+        "topic": "PIPELINING & MULTIPROCESSING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "HARDWARE LAB",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "EVS",
+        "topic": "UNIT-1",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "EVS",
+        "topic": "UNIT-II",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "EVS",
+        "topic": "UNIT-III",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "EVS",
+        "topic": "UNIT-IV",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "EVS",
+        "topic": "UNIT-V",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "LIFE SKILLS MANAGEMENT",
+        "topic": "RELATIONSHIP MANAGEMENT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "APPLETS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "EVENT HANDLING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "MULTITHREADING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "OOPS - INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "JAVA I/O",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "INHERITANCE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "POLYMORPHISM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "JAVA",
+        "topic": "CLASSES & OBJECTS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CS",
+        "subject": "HARDWARE LAB",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "ARRAY & LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "SORTING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "GRAPH",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "TREE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "HASHING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "QUEUE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "STACKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DATA STRUCTURE",
+        "topic": "LINKED LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "CONVERSIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "MICROPROCESSOR",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "IC-555 ",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "SIGNAL CONVERSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "REGISTERS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COUNTER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "FLIP FLOPS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COMBINATIONAL CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "LOGIC FAMILIES",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "COA",
+        "topic": "COA - BASICS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "COA",
+        "topic": "MEMORY SYSTEM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "COA",
+        "topic": "PROCESSING UNIT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "COA",
+        "topic": "I/O ORGANISATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "COA",
+        "topic": "PIPELINING & MULTIPROCESSING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "GRAPH THORY",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "RELATIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "LATTICES",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "PREPOSITIONS & LOGICS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "MATHEMATICAL INDUCTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "COUNTING TECHNIQUES & RECURRENCE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "TREE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "DISCRETE MATHEMATICS",
+        "topic": "BOOLEAN ALGEBRA",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "LIFE SKILLS MANAGEMENT",
+        "topic": "TIME MANAGEMENT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "LIFE SKILLS MANAGEMENT",
+        "topic": "STRESS MANAGEMENT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "LIFE SKILLS MANAGEMENT",
+        "topic": "NORMALITY",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "IT",
+        "subject": "LIFE SKILLS MANAGEMENT",
+        "topic": "YOGA",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "COMPLEX VARIABLE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "RANDOM PROCESS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "INTERPOLATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "NUMERICAL SOLUTION METHODS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "FOURIER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "COMPLEX VARIABLE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "RANDOM PROCESS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "INTERPOLATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "NUMERICAL SOLUTION METHODS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - III",
+        "topic": "FOURIER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "CONVERSIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "LOGIC FAMILIES",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COMBINATIONAL CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "FLIP FLOPS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COUNTER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "REGISTERS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "SIGNAL CONVERSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "IC-555 ",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "MICROPROCESSOR",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "MICROPROCESSOR",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "IC-555 ",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "SIGNAL CONVERSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "REGISTERS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COUNTER",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "FLIP FLOPS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "COMBINATIONAL CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "LOGIC FAMILIES",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DIGITAL ELECTRONICS",
+        "topic": "CONVERSIONS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "ARRAY & LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "SORTING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "LINKED LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "STACKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "QUEUE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "HASHING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "TREE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "DATA STRUCTURE",
+        "topic": "GRAPH",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "ARRAY & LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "SORTING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "LINKED LIST",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "STACKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "QUEUE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "HASHING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "TREE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "DATA STRUCTURE",
+        "topic": "GRAPH",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "SEMICONDUCTOR IN EQUILIBRIUM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "CHARGE CARRIERS IN SEMICONDUCTORS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "FERMI ENERGY LEVEL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "CARRIER DRIFT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "DIFFUSION CURRENT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "CARRIER GENERATION & RECOMBINATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "PN JUNCTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "SPACE CHARGE WIDTH & ELECTRIC FIELD",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "JUNCTION CAPACITANCE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "BJT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "CRYSTAL STRUCTURE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "CZ METHOD OXIDATION DIFFUSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "ION IMPLANTATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "FABRICATION",
+        "topic": "LITHOGRAPHY",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "NAAS",
+        "topic": "NETWORK THEOREMS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "NAAS",
+        "topic": "TRANSIENT & STEADY STATE ANALYSIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "NAAS",
+        "topic": "TWO PORT NETWORKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "NAAS",
+        "topic": "LAPLACE & FOURIER ANALYSIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "NAAS",
+        "topic": "NETWORK SYNTHESIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "COMMUNICATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "INTER-PERSONAL SKILLS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "LISTENING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "INTERVIEWS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "TC",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "GROUP DISCUSSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "COMMUNICATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "INTER-PERSONAL SKILLS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "LISTENING",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "INTERVIEWS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "GROUP DISCUSSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "NAAS",
+        "topic": "NETWORK THEOREMS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "NAAS",
+        "topic": "TRANSIENT & STEADY STATE ANALYSIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "NAAS",
+        "topic": "TWO PORT NETWORKS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "NAAS",
+        "topic": "LAPLACE & FOURIER ANALYSIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "NAAS",
+        "topic": "NETWORK SYNTHESIS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "SEMICONDUCTOR IN EQUILIBRIUM",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "LITHOGRAPHY",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "ION IMPLANTATION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "CZ METHOD OXIDATION DIFFUSION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "CRYSTAL STRUCTURE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "BJT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "JUNCTION CAPACITANCE",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "SPACE CHARGE WIDTH & ELECTRIC FIELD",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "PN JUNCTION",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "CHARGE CARRIERS IN SEMICONDUCTORS",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "FERMI ENERGY LEVEL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "CARRIER DRIFT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "DIFFUSION CURRENT",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "EI",
+        "subject": "FABRICATION",
+        "topic": "CHARGE CARRIERS IN SEMICONDUCTORS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED DIFFERENTIAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "ADVANCED INTEGRAL CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - I",
+        "topic": "VECTOR CALCULUS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CHEMISTRY",
+        "topic": "WATER & ITS APPLICATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CHEMISTRY",
+        "topic": "ENGG MATERIALS & TESTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CHEMISTRY",
+        "topic": "LUBRICANTS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CHEMISTRY",
+        "topic": "ENVIRONMENTAL SCIENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "ENVIRONMENTAL SCIENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "LUBRICANTS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "ENGG MATERIALS & TESTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CHEMISTRY",
+        "topic": "WATER & ITS APPLICATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CHEMISTRY",
+        "topic": "ENVIRONMENTAL SCIENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CHEMISTRY",
+        "topic": "LUBRICANTS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CHEMISTRY",
+        "topic": "ENGG MATERIALS & TESTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CHEMISTRY",
+        "topic": "WATER & ITS APPLICATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CHEMISTRY",
+        "topic": "ENVIRONMENTAL SCIENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CHEMISTRY",
+        "topic": "LUBRICANTS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CHEMISTRY",
+        "topic": "ENGG MATERIALS & TESTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CHEMISTRY",
+        "topic": "WATER & ITS APPLICATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CHEMISTRY",
+        "topic": "ENVIRONMENTAL SCIENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CHEMISTRY",
+        "topic": "INSTRUMENTAL TECHNIQUES IN MATERIAL CHAR",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CHEMISTRY",
+        "topic": "LUBRICANTS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CHEMISTRY",
+        "topic": "ENGG MATERIALS & TESTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CHEMISTRY",
+        "topic": "WATER & ITS APPLICATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "WELDING & MACHINING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "METAL CASTING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "PURE SUBSTANCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "ENGINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELEMENTS OF MECHANICAL ENGG",
+        "topic": "THERMODYNAMICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DISCRETE ELECTRONIC DEVICES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "DIODE CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "BJT CHARACTERISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "OPERATIONAL AMPLIFIER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "BASIC ELECTRONICS",
+        "topic": "FEEDBACK THEORY",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "TECHNICAL ENGLISH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "PROBABILITY & STATISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "PROBABILITY & STATISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "PROBABILITY & STATISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER ORDINARY DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "PROBABILITY & STATISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "MATRIX",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "1st ORDER PARTIAL DIFF EQN",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "PROBABILITY & STATISTICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS - II",
+        "topic": "THEORY & EQUATIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "PHYSICS",
+        "topic": "POLARIZATION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "PHYSICS",
+        "topic": "CRYSTAL STRUCTURE & SEMI-CON",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "PHYSICS",
+        "topic": "POLARIZATION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "PHYSICS",
+        "topic": "CRYSTAL STRUCTURE & SEMI-CON",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "PHYSICS",
+        "topic": "POLARIZATION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "PHYSICS",
+        "topic": "CRYSTAL STRUCTURE & SEMI-CON",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "PHYSICS",
+        "topic": "POLARIZATION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "PHYSICS",
+        "topic": "CRYSTAL STRUCTURE & SEMI-CON",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "PHYSICS",
+        "topic": "POLARIZATION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "PHYSICS",
+        "topic": "CRYSTAL STRUCTURE & SEMI-CON",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "PHYSICS",
+        "topic": "INTERFERENCE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "PHYSICS",
+        "topic": "ELECTROMAGNETISM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "PHYSICS",
+        "topic": "QUANTUM PHYSICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "INTRODUCTION",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "PROJECTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "POINT LINE PLANE",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "SOLID & ITS DEVELOPMENT",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ED",
+        "topic": "INTERSECTION OF SOLIDS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "CIRCUIT ANALYSIS TOOLS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "CIRCUIT ANALYSIS TOOLS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "CIRCUIT ANALYSIS TOOLS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "CIRCUIT ANALYSIS TOOLS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "CIRCUIT ANALYSIS TOOLS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "AC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "ROTATING ELECTRIC MACHINES",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "MAGNETIC CIRCUITS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "ELECTRICAL ENGINEERING",
+        "topic": "TRANSFORMER",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CPP",
+        "topic": "CPP BASICS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CPP",
+        "topic": "FUNCTIONS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CPP",
+        "topic": "POINTERS",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CPP",
+        "topic": "OOPS PARADIGM",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "CPP",
+        "topic": "OPERATOR OVERLOADING",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "HUMANITIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CS",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "IT",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "TC",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "EI",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "MECH",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "1",
+        "branch": "CIVIL",
+        "subject": "WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "APPLIED MATHEMATICS-III",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "SOM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "MATERIAL SCIENCE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "MANUFACTURING PROCESS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "COMMUNICATION SKILL",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "MECH",
+        "subject": "THERMODYNAMICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "APPLIED MATHEMATICS-III",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "APP. MECHANICS & SOM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "SURVEYING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "CONSTRUCTION MATERIAL & TECH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "STRUCTURAL MECHANICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "DRAFTING & COMPUTAIONAL SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "3",
+        "branch": "CIVIL",
+        "subject": "LIFE MANAGEMENT SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "DISCRETE STRUCTURE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "OPERATING SYSTEM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "ABSTRACTION & PARADIGM FOR PRO",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "DBMS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "DIGITAL SIGNAL PROCESSING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "ANDROID PROGRAMMING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CS",
+        "subject": "ENGINEERING ECONOMICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "NUMERICAL & OPTIMIZATION TECH",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "OPERATING SYSTEM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "SOFTWARE ENGINEERING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "DBMS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "DIGITAL COMMUNICATION ENGG.",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "SMART SYSTEMS LAB",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "IT",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "COA",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "ELECTRICAL & ELECTRONIC MEASUR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "ANALOG ELECTRONICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "ANALOG COMMUNICATION",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "SIGNALS & SYSTEMS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "ELECTRONIC WORKSHOP-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "TC",
+        "subject": "ENGINEERING ECONOMICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "COA",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "ELECTRICAL & ELECTRONIC MEASUR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "ANALOG ELECTRONICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "SENSOR & TRANSDUCER",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "SIGNALS & SYSTEMS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "ELECTRONIC WORKSHOP-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "EI",
+        "subject": "ENGINEERING ECONOMICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "INDUSTRIAL ENGG & MANAGEMENT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "THEORY OF MACHINE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "MACHINE DESIGN",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "FLUID MECHANICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "MECHATRONICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "THERMODYNAICS WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "MECH",
+        "subject": "ENGINEERING ECONOMICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "ENGG GEOLOGY",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "FLUID MECHANICS-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "ADVANCED SURVEYING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "DESIGN OF RCC STRUCT-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "ENVIRONMENTAL ENGG-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "4",
+        "branch": "CIVIL",
+        "subject": "COMMUNICATION SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "THEORY OF COMPUTATION",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "SOFTWARE ENGINEERING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "COMUPTER NETWORKS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "SERVER SIDE PROGRAMMING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "OBJECT ORIENTED ANALYSIS & DES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CS",
+        "subject": "ENGINEERING LEADERSHIP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "THEORY OF COMPUTATION",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "OBJECT ORIENTED ANALYSIS & DES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "COMUPTER NETWORKS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "WEB TECHNOLOGIES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "APPLIED STATISTICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "SCRIPTING LANG LAB",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "IT",
+        "subject": "PRINCIPLES OF MANAGEMENT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "DIGITAL SIGNAL PROCESSING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "PRINCIPLES OF MANAGEMENT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "JAVA (OOPS)",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "MICROCONTROLLERS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "JAVA (OOPS)",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "DIGITAL COMMUNICATION",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "EMF & TRANSMISSION LINE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "TC",
+        "subject": "SOFTWARE WORKSHOP",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "ANALOG & DIGITAL ELECTRONICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "POWER ELECTRONICS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "MICROCONTROLLERS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "DIGITAL SIGNAL PROCESSING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "SOFTWARE WORKSHOP-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "EI",
+        "subject": "SKILL COURSE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "DYNAMICS OF MACHINE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "MACHINE DESIGN-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "HEAT & MASS TRANSFER",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "I.C. ENGINE & GAS TURBINE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "PRODUCTION ENGINEERING-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "MECH",
+        "subject": "PRINCIPLES & PRACTICES OF MANA",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "DESIGN OF RCC STRUCTURE-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "FLUID MECHANICS-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "QUANTITY SURVEYING & COSTING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "GEOTECHNICAL ENGG-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "WATER RESOURCES ENGG",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "DESIGN SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "5",
+        "branch": "CIVIL",
+        "subject": "PROFESSIONAL SKILLS-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "COMPUTER GRAPHICS & VISUALISAT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "DESIGN & ANALYSIS OF ALGORITHM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "COMPILER TECHNIQUE",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "DATA WAREHOUSING & MINING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "WIRELESS NETWORK",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CS",
+        "subject": "PROFESSIONAL DEVELOPMENT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "VLSI DESIGN",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "MEDICAL & ANALYTICAL INSTRUMEN",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "CONTROL SYSTEM",
+        "topic": "GENRERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "LINEAR INTEGRATED CIRCUIT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "COMPUTER NETWORK",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "EI",
+        "subject": "ENTREPRENEURSHIP DEV & IPR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "WIRELESS PROTOCOL & MOB NETWOR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "DESIGN & ANALYSIS OF ALGORITHM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "NETWORK & INFORMATION SECURITY",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "SOFTWARE TESTING & QUALITY AS.",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "COMPILER DESIGN",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "IT",
+        "subject": "ENTREPRENUERSHIP DEV & IPR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "VLSI DESIGN",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "CONTROL SYSTEM",
+        "topic": "GENRERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "LINEAR INTEGRATED CIRCUIT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "COMPUTER NETWORK",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "ENTREPRENEURSHIP DEV & IPR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "TC",
+        "subject": "WIRELESS PROTOCOL & MOB NETWOR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "MATERIAL MANAGEMENT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "MACHINE DESIGN-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "PRODUCTION ENGINEERING",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "FLUID MACHINES",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "ENERGY CONVERSION SYSTEM",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "MECH",
+        "subject": "EDP & IPR",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "STRUCTURAL ANALYSIS-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "TRANSPORTATION ENGG-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "DESIGN OF STEEL STRUCTURES-I",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "GEOTECHNICAL ENGG.-II",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "CONSTRUCTION PLANNING & MNGMT",
+        "topic": "GENERAL",
+        "show": true
+    },
+    {
+        "sem": "6",
+        "branch": "CIVIL",
+        "subject": "TECHNICAL SKILLS",
+        "topic": "GENERAL",
+        "show": true
+    }
+]
