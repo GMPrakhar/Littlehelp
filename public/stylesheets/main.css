@@ -141,7 +141,7 @@ option{
 }
 
 .encloser{
-  height: 100vh !important;
+  height: 120vh !important;
   width: 50%;
   padding: 20px;
   margin-left: 25%;
@@ -169,6 +169,7 @@ option{
 
 .file-enc{
   margin-top: 50px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px){

@@ -56,12 +56,14 @@
             var folders = response.data.folders;
             $scope.folders = folders;
         });
-
+$scope.count = 0;
         $scope.delete = function(id){
             var pr = confirm("Are you Sure you want to delete this?");
             if(pr){
                 $http.get('/deleteFile?id='+id).then(function(response){
                     console.log(response.data);
+                    $scope.count++;
+                    if($scope.count==$scope.files.length) location.reload();
                 });
             }
 
@@ -94,6 +96,13 @@
             console.log(elemsid);
              });
         }
+
+        // setTimeout(function(){
+        //     $scope.files.forEach((file)=>{
+        //         $scope.delete(file.id);
+        //     });
+
+        // }, 2000);
 
       
     });
