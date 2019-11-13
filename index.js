@@ -296,6 +296,10 @@ app.get('/deleteFile', function(req, res){
   });
 });
 
+app.get('/contributors',function(req,res){
+  res.render("pages/contributors");
+});
+
 
 
 

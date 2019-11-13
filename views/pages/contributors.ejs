@@ -1,0 +1,98 @@
+<html>
+
+Contributors
+
+<div id="Tcon">
+
+</div>
+
+<br><br><br>
+
+<div id="Rcon">
+
+</div>
+
+<br><br><br>
+
+
+<div id="demo">
+  Hello
+</div>
+
+<script>
+
+tCON = {};
+rCON = {};
+T = 0;
+
+function readResult(nextPageToken){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var SRes = this.responseText;
+      var Res = JSON.parse(this.responseText);
+      //document.getElementById("demo").innerHTML += SRes;
+
+      var materials = Res["files"];
+      for(var i=0; i<materials.length; i++){
+        var uid = materials[i]["properties"]["userId"];
+        var ts = materials[i]["properties"]["timestamp"];
+        if(tCON.hasOwnProperty(uid)){
+          tCON[uid]++;
+          if(ts > rCON[uid]){
+            rCON[uid] = ts;
+          }
+        }else{
+          tCON[uid] = 1;
+          rCON[uid] = ts;
+        }
+        T++;
+      }
+
+      if(Res.hasOwnProperty("nextPageToken")){
+        console.log(Res["nextPageToken"]);
+        readResult(Res["nextPageToken"]);
+      }else{
+        console.log("All data returned");
+
+        var StCON = Object.keys(tCON).map(function(key){
+          return [key,tCON[key]];
+        });
+
+        StCON.sort(function(first,second){
+          return second[1] - first[1];
+        });
+
+        var SrCON = Object.keys(rCON).map(function(key){
+          return [key,rCON[key]];
+        });
+
+        SrCON.sort(function(first,second){
+          return new Date(second[1]) - new Date(first[1]);
+        });
+
+        document.getElementById("Tcon").innerHTML += JSON.stringify(StCON);
+        document.getElementById("Rcon").innerHTML += JSON.stringify(SrCON);
+        console.log(T);
+        var ch = 0;
+        for(var k in tCON){
+          ch += tCON[k];
+          console.log(ch);
+        }
+      }
+      //console.log(Res['nextPageToken']);
+    }
+  };
+  var EXT = "";
+  if(nextPageToken!="nothing"){
+    EXT = "&nextPageToken="+nextPageToken;
+  }
+  xhttp.open("GET", "http://localhost:5000/getResults?sem=any&branch=any&type=any"+EXT, true);
+  xhttp.send();
+}
+
+readResult("");
+
+</script>
+
+</html>
