@@ -177,7 +177,7 @@ module.exports = function(app){
                 
             });
         })
-        .catch(err => {
+        .catch(err => { 
             console.log('Error getting documents : ', err);
         });
     });
@@ -738,4 +738,27 @@ module.exports = function(app){
             return;
         });
     });
+
+    app.get('/showAllUsers', function(req,response){
+        const { Client } = require('pg');
+        console.log("_____"+process.env.DATABASE_URL+"____");
+        process.env.DATABASE_URL = "postgres://egbnbltczdjebm:be18667a0b64e56866b17603c19cdf2d95721f731ec0863307389e76bc581e2b@ec2-174-129-222-15.compute-1.amazonaws.com:5432/dcuse93b91mtsk";
+        const client = new Client({
+        connectionString: process.env.DATABASE_URL,
+        ssl: true,
+        });
+
+        client.connect();
+
+        client.query('SELECT * FROM users;', (err, res) => {
+        if (err) throw err;
+        for (let row of res.rows) {
+            console.log(JSON.stringify(row));
+            response.write(JSON.stringify(row));
+        }
+        client.end();
+        response.end();
+        });
+    });
+
 }

@@ -13,7 +13,7 @@ const jwt = new google.auth.JWT(
 );
 let drive = google.drive('v3');
 
-//var APIS = require('./apis')(app)
+var APIS = require('./apis')(app)
 
 app.set('port', (process.env.PORT || 5000));
 
