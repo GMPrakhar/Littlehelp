@@ -9,13 +9,28 @@ admin.initializeApp({
 let db = admin.firestore();
 var p = 10;
 
+const { exec } = require('child_process');
 const { Client } = require('pg');
-process.env.DATABASE_URL = serviceAccount.heroku_db_uri;
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: true,
-});
 
+var client;
+
+/*
+function updateDBuri(){
+    exec('heroku config:get DATABASE_URL -a littlehelp', (err, stdout, stderr) => {
+        if (err) {
+          // node couldn't execute the command
+          return;
+        }
+      
+        // the *entire* stdout and stderr (buffered)
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+        process.env.DATABASE_URL = stdout;
+    });    
+}
+*/
+
+    //process.env.DATABASE_URL = serviceAccount.heroku_db_uri;
 
 function deleteUser(userEmail){
     let userRef = db.collection('users').doc(userEmail).delete();
@@ -114,12 +129,18 @@ module.exports = function(app){
         if(req.query.userAdmYear == null) req.query.userAdmYear = "";
         if(req.query.userLastSeen == null) req.query.userLastSeen = "";
 
-        
+
+        client = new Client({
+            connectionString: process.env.DATABASE_URL,
+            ssl: true,
+        });
+
         client.connect();
 
         //Q = "INSERT INTO users VALUES('234','mail.govind.c@gmail.com','Govind Choudhary','9879088575','gv.lh.com','CS','2016','2019-11-14 17:34:09')";
         Q = "SELECT * FROM users WHERE userid = '"+req.query.userID+"' AND useremail = '"+req.query.userEmail+"' ";
         console.log("checking existing on users...!!!");
+        console.log(Q);
 
         client.query(Q, (err, Qres) => {
 
@@ -131,6 +152,7 @@ module.exports = function(app){
                 msg.login = "false";
                 msg.msg = err;
                 res.write(JSON.stringify(msg));
+                client.end();
                 res.end();
                 return;
             }
@@ -138,17 +160,17 @@ module.exports = function(app){
             rowCount = Qres.rows.length;
 
             if(rowCount==1){
-                //client.end();
                 msg.result = "success";
                 msg.login = "true";
                 msg.msg = Qres;
                 res.write(JSON.stringify(msg));
                 res.end();
-                return;    
+                return;
             }
 
             QI = "INSERT INTO users VALUES('"+req.query.userID+"','"+req.query.userEmail+"','"+req.query.userName+"','"+req.query.userContact+"','"+req.query.userImageURL+"','"+req.query.userBranch+"','"+req.query.userAdmYear+"','"+req.query.userLastSeen+"')";
             console.log("registering user...!!!");
+            console.log(QI);
             client.query(QI, (errI, QresI) => {
 
                 try{
@@ -159,6 +181,7 @@ module.exports = function(app){
                     msg.login = "false";
                     msg.msg = errI;
                     res.write(JSON.stringify(msg));
+                    client.end();
                     res.end();
                     return;
                 }
@@ -175,6 +198,104 @@ module.exports = function(app){
                     return;
                 }
             });
+        });
+
+    });
+
+    app.get('/updateUser', function(req,res){
+        var msg = {};
+
+        if(!(req.query.key===serviceAccount.littlehelp_key)){
+            msg.msg = "Invalid Secret Parameter";
+            msg.result = "failure";
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        delete req.query.key;
+        msg.data = req.query;
+        /*
+            expected req paramaeter key
+            : userID
+            : userName
+            : userEmail
+            : userImageURL
+            : userBranch
+            : userAdmYear
+            : userContact
+            : userLastSeen
+        */
+
+        paramList = [{'userID':'required'},{'userEmail':'required'},'userName','userImageURL','userBranch','userAdmYear','userContact','userLastSeen'];
+
+        console.log("registerUser : following user registration request initiated : ");
+        console.log(req.query);
+
+        // check whether api passed userID and userEmail
+        if(req.query.userID == null){
+            console.log("req Object has missing userID parameter.");
+            msg.result = 'failure';
+            msg.login = "false";
+            msg.paramList = paramList;
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+        if(req.query.userEmail == null){
+            console.log("req Object has missing userEmail parameter.");
+            msg.result = 'failure';
+            msg.login = "false";
+            msg.paramList = paramList;
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;
+        }
+
+        Q = "UPDATE users SET ";
+
+        if(req.query.userName != null) Q += "username = '"+req.query.userName+"',";
+        if(req.query.userContact != null) Q += "usercontact = '"+req.query.userContact+"',";
+        if(req.query.userImageURL != null) Q += "userimageurl = '"+req.query.userImageURL+"',";
+        if(req.query.userBranch != null) Q += "userbranch = '"+req.query.userBranch+"',";
+        if(req.query.userAdmYear != null) Q += "useradmyear = '"+req.query.userAdmYear+"',";
+        if(req.query.userLastSeen != null) Q += "userlastseen = '"+req.query.userLastSeen+"',";
+
+        Q += "useremail = '"+req.query.userEmail+"'";
+        Q += "WHERE useremail = '"+req.query.userEmail+"'";
+
+        client = new Client({
+            connectionString: process.env.DATABASE_URL,
+            ssl: true,
+        });
+    
+        console.log(process.env.DATABASE_URL);
+        client.connect();
+
+        msg.Query = Q;
+        console.log("\n"+Q+"\n");
+
+        client.query(Q, (err, Qres) => {
+
+            try{
+                if (err) throw err;
+            }catch(err){
+                console.log(err);
+                msg.result = "failure";
+                msg.msg = err;
+                res.write(JSON.stringify(msg));
+                res.end();
+                return;
+            }
+
+            rowCount = Qres.rows.length;
+
+            client.end();
+            msg.result = "success";
+            msg.msg = Qres;
+            res.write(JSON.stringify(msg));
+            res.end();
+            return;            
+
         });
 
     });
