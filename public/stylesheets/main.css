@@ -1,0 +1,229 @@
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+#marker{
+  position: absolute;
+  width: 9em;
+  height: 2px;
+  background: white;
+  top: 90px;
+}
+
+.nav-link{
+  font-size: large ;
+  color: white !important;
+}
+
+
+@keyframes glow{
+  0% {
+    text-shadow: 0 0px 20px rgb(204,204,204),
+     0 0px 6px rgb(201,201,201);}
+  100% {
+    text-shadow: 0 0px 20px rgb(204,204,204),
+     0 0px 15px rgb(201,201,201);}
+  
+}
+
+.navbar-brand{
+  font-size: 47px ;
+  color: white !important;
+  text-shadow: 0 0px 20px rgb(204,204,204),
+   0 0px 6px rgb(201,201,201);
+ 
+  font-family: Arial, Helvetica, sans-serif !important; 
+  animation-name: glow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.navbar{
+  background: transparent;
+  border: none !important;
+  padding: 30px;
+}
+
+
+.current{
+  color: rgb(196, 189, 189) !important;
+}
+
+
+body{
+
+  background: repeating-linear-gradient(-45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), repeating-linear-gradient(45deg, rgba(94, 47, 140, 0.9) 0, rgba(94, 47, 140, 0.8) 4em), #FFF;
+  background-blend-mode: multiply;
+  background-size: 400% 400%;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+
+
+.carousel-card{
+  text-align: center;
+  padding: 20px;
+  height: 75vh;
+  background: white;
+}
+
+.img{
+  height: 60%;
+  width: 25%;
+  border-radius: 50%;
+}
+.img-icon{
+  height: 40%;
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+.developers{
+  text-align: left;
+  width: 100%;
+}
+
+td{
+  font-size: normal;
+  text-align: center;
+  height: 180px;
+  transition: box-shadow 0.4s;
+  cursor: pointer;
+}
+td:hover{
+  box-shadow: 0 0px 5px #BBB;
+}
+
+.form-group{
+
+  height: 70vh !important;
+  background: white;
+  padding: 20px;
+}
+
+.form-control{
+  cursor: pointer;
+}
+
+.mobile{
+  display: none;
+}
+
+.desktop{
+  height: 20vh !important;
+}
+
+select{
+  background: lightgray !important;
+  font-weight: 500;
+}
+
+option{
+  font-weight: 500;
+}
+
+.encloser{
+  height: 120vh !important;
+  width: 50%;
+  padding: 20px;
+  margin-left: 25%;
+  background: white;
+}
+
+.upload-form{
+  position: absolute;
+  width: 30%;
+  background: transparent;
+  margin-left: 9.5%;
+}
+
+
+.filer{
+  padding: 20px;
+  background: #4CAF50;
+  color: white;
+  margin: 10px 25px;
+  width: 80%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+
+.file-enc{
+  margin-top: 50px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+ 
+
+
+  .file-enc{
+    margin-top: 60px;
+    width: 100%;
+  }
+  #marker{
+    opacity: 0;
+  }
+
+  .img{
+    
+  height: 50%;
+  width: 50%;
+  }
+
+
+  .desktop{
+    height: 45vh !important;
+  }
+
+  td{
+    font-size: normal;
+    width: 50%;
+    box-shadow: 0 0px 5px #EEE;
+    transition: box-shadow 0.4s;
+  }
+
+  td:hover{
+    box-shadow: 0 0px 5px #BBB;
+  }
+
+  .encloser{
+    width : 100%;
+    margin-left: 0px;
+  }
+
+  
+.upload-form{
+  position: initial;
+  width: 100%;
+  background: transparent;
+  margin-left: 0px;
+}
+}
+
+@media only screen and (min-width: 600px){
+
+  .filer:nth-child(3n+1){
+    margin-left: 80px;
+  }
+}

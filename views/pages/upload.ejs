@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+
+
+  <% include ../partials/nav.ejs %>
+<body>
+    <div class="encloser">
+        <center><h4>File Upload</h4></center><br>
+        <form class="form-group upload-form" method="POST" enctype="multipart/form-data" action="/uploadFile">
+                <label for="semm">Semester: </label>
+                <select class="form-control" id="semm" name="sem" onchange="filterSubject('sem',this)" required>
+                    <option value="any">Any</option>
+                    <option>I Year</option>
+                    <option>III</option>
+                    <option>IV</option>
+                    <option>V</option>
+                    <option>VI</option>
+                    <option>VII</option>
+                    <option>VIII</option>
+                </select>
+                <label for="branchm">Branch: </label>
+                <select class="form-control" id="branchm" name="branch" onchange="filterSubject('branch',this)" required>
+                    <option value="any">Any</option>
+                    <option>CS</option>
+                    <option>IT</option>
+                    <option>ETC</option>
+                    <option>EI</option>
+                    <option>MECH</option>
+                    <option>CIVIL</option>
+                </select>
+                <label for="typem">Type: </label>
+                <select class="form-control" id="typem" name="type" onchange="filterSubject('type', null)" required>
+                    <option value="any">Any</option>
+                    <option value="NOTES">Notes</option>
+                    <option value="QUEST">Question Papers</option>
+                    <option value="BOOKS">Books</option>
+                    <option value="PRACTICAL">Practical</option>
+                    <option value="OTHER">Other</option>
+                </select>
+
+                <label for="year">Year: </label>
+                <select class="form-control" id="year" name="year" required>
+                    <option value=""><%= new Date().getFullYear(); %></option>
+                    <option><%= new Date().getFullYear() -1; %></option>
+                    <option><%= new Date().getFullYear() -2; %></option>
+                    <option><%= new Date().getFullYear() -3; %></option>
+                    <option><%= new Date().getFullYear() -4; %></option>
+                </select>
+
+                <label for="subject">Subject: </label>
+                <select class="form-control" id="subject" name="subject">
+                   
+                </select>
+                
+                <label for="topic">Topic: </label>
+                <select class="form-control" id="topic" name="topic"  >
+                   
+                </select><br>
+
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="material_name" placeholder="Optional">
+                <div class="">
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" value="MST1" name="mst1">
+                    <label class="custom-control-label" for="customCheck1">MST 1</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck2" value="MST2" name="mst2">
+                    <label class="custom-control-label" for="customCheck2">MST 2</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck3" value="MST3" name="mst3">
+                    <label class="custom-control-label" for="customCheck3">MST 3</label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck4" value="END" name="end">
+                    <label class="custom-control-label" for="customCheck4">End Sem</label>
+                  </div>
+                </div>  <br>
+                <input type="file" class="form-control" name="filetoupload"><br>
+
+                <input type="hidden" id="actsem" name="actsem" value="any">
+                <input type="hidden" id="actbr" name="actbr" value="any">
+                <input type="hidden" id="acttype" name="acttype" value="any">
+                <input type="hidden" name="userId" value="<%= session.userID; %>">
+                <input type="hidden" name="uploader" value="<%= session.userName; %>">
+                <input type="hidden" name="timestamp" value ="<%= new Date().toISOString().slice(0, 19).replace('T', ' ') %>">
+                <button type="submit" class="btn btn-primary btn-md btn-block study-btn" style="margin-top: 50px;" >Submit</button>
+              </form>
+    </div>
+</body>
+
+
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,3693901,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+
+<script>
+  var drive_arr = ["12JTuWJqxB4XwK-3XcSnXFYP2Zrl8SAjU", "1XROM3Wj6mHAEeLPq3aznqICfU0rpPZMY", "1AP6o61I12drcbGLIHTkogX-1T9qIMghf", "1rfBVBb-X26w4Wohdc2nj1TbWAbt_68n5", "1ZMZ9op4Q1fw2_1WMCVckqhzgRkoAgPTr", "1TKqtiaNTvOhEhTtw6_1FH3JIzqVlXiL3",
+   "1Zbywe2z39Ab8wu8Rt02aoXK1jJrrQmaO","1ozwjtEAB6EosO1H5kkZhOT6jdF5te3xY", "1yJJzCbIPitG3UFLr1t1VeMiBb2NS2015", "1tY6_-K9oFfy4I_3pafvwlyzA0-LRZb1p", "1VGk1uBxuYoyy05jnwlIvwh_sJskNWBc0",
+   "1vZIgq_0MthVpHbTyrV8cPAe1gKoXcSBv", "1kEGQ7NFBsbsgFV_LXVCeBBC2gWjQXtpw", "1w1eX1iWTx8RCr7XfSK51ixP4HNl29goE", "1PDpLm3Pm90txBbJL8hyF7i9m8QxVj5Vv", "1fMSz9gQHmJ_cVfcaCeWMWNw7k-L1ZnWf", "1feA5FBQsnvhwYNIch6awiGeK-ABwQc0m", "19jzGpg8aBR8xFluK-ot54hNhQSVJ2Yia"];
+        $('.current').removeClass('current');
+        $('.nav-item:nth-of-type(3)').addClass('current');
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
+    var count =  17;
+    $('#semm option').each((ind, elem)=>{
+      if(ind!=0) 
+      $(elem).attr('value',drive_arr[count--]);
+    });
+    $('#typem option').each((ind, elem)=>{
+      if(ind!=0) 
+      $(elem).attr('value',drive_arr[count--]);
+    });
+    $('#branchm option').each((ind, elem)=>{
+      if(ind!=0)
+      $(elem).attr('value',drive_arr[count--]);
+    });
+$('.nav-item').mouseover(function(){
+  var left = $(this).offset().left + 10;
+  var width = $(this).width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+
+$('.nav-item').mouseout(function(){
+  var left = $('.current').offset().left + 10;
+  var width = $('.current').width();
+  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+});
+
+var ojson;
+$.get('data/subjects.txt').then(function(data, status){
+  ojson = JSON.parse(data);
+  subFromJson(ojson);
+  console.log(json);
+}).catch(function(){
+
+});
+
+function filterSubject(from, elem){
+
+
+
+    var svalue = $('#semm option:selected').text();
+    var bvalue = $('#branchm option:selected').text();
+    
+   
+    switch(svalue){
+      case 'I Year': svalue = 1; break;
+      case 'III': svalue = 3; break;
+      case 'IV': svalue = 4; break;
+      case 'V': svalue = 5; break;
+      case 'VI': svalue = 6; break;
+      case 'VII': svalue = 7; break;
+      case 'VIII': svalue = 8; break;
+    }
+
+    if(bvalue=='ETC') bvalue = "TC";
+    if(from=='sem'){
+      $('#actsem').val(svalue);
+      console.log(svalue);
+    }else if(from=='branch') $('#actbr').val(bvalue);
+    else{
+      var tval = $('#typem option:selected').text();
+      $('#acttype').val(tval);
+      return;
+    }
+    njson = [];
+    ojson.forEach(elem => {
+      if(elem.sem == svalue && elem.branch==bvalue) njson.push(elem);
+    });
+
+    subFromJson(njson);
+  
+}
+
+
+function subFromJson(tjson){
+  $('#subject').html('');
+  $('#topic').html('');
+  console.log(tjson);
+  tjson.forEach(elem => {
+    if($('option:contains('+elem.subject+')').length==0)
+      $('#subject').append('<option>'+elem.subject+'</option>');
+    if($('option:contains('+elem.topic+')').length==0)
+      $('#topic').append('<option>'+elem.topic+'</option>');
+  });
+}
+</script>
+</html>

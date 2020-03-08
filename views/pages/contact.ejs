@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+  <div class="row">
+      <div class="col-md-4 col-0"></div>
+      <div class="col-md-4 col-12">
+    <form onsubmit="return false;">
+        <div class="form-group contact-form">
+                <center><h3>Feedback</h3></center><br>
+            <label for="exampleInputEmail1">Your Name:</label>
+            <input required type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Name">
+            <label for="exampleInputPassword1">Feedback: </label>
+            <textarea required id="fback" class="form-control" placeholder="Your Feedback" rows="8"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="asyncFeedback()">Submit</button>
+    </form>
+    </div>
+</div>
+</body>
+<script>
+    
+        $('.current').removeClass('current');
+        $('.nav-item:nth-of-type(5)').addClass('current');
+        var left = $('.current').offset().left + 10;
+        var width = $('.current').width();
+        $('#marker').stop().animate( {  left: left, width: width  }, 0 );
+        $('.nav-item').mouseover(function(){
+          var left = $(this).offset().left + 10;
+          var width = $(this).width();
+          $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+        });
+    
+        $('.nav-item').mouseout(function(){
+          var left = $('.current').offset().left + 10;
+          var width = $('.current').width();
+          $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+        });
+        
+        function asyncFeedback(){
+            var name = $('#name').val();
+            var fback = $('#fback').val();
+            $.get('/feedback?name='+name+'&feedback='+fback+"&timestamp="+ new Date().toISOString().slice(0, 19).replace('T', ' ') ).then(function(data, status){
+                alert(data);
+            }).catch(function(){
+
+            });
+        }
+        
+    </script>
+</html>

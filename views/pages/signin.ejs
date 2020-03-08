@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<% include ../partials/header.ejs %>
+	<style>
+		:root {
+		  --input-padding-x: 1.5rem;
+		  --input-padding-y: .75rem;
+		}
+		
+		.card-signin {
+		  border: 0;
+		  border-radius: 1rem;
+		  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+		}
+
+		.card-signin .card-title {
+		  margin-bottom: 2rem;
+		  font-weight: 300;
+		  font-size: 1.5rem;
+		}
+
+		.card-signin .card-body {
+		  padding: 2rem;
+		}
+
+		.form-signin {
+		  width: 100%;
+		}
+
+		.form-signin .btn {
+		  font-size: 80%;
+		  border-radius: 5rem;
+		  letter-spacing: .1rem;
+		  font-weight: bold;
+		  padding: 1rem;
+		  transition: all 0.2s;
+		}
+
+		.form-label-group {
+		  position: relative;
+		  margin-bottom: 1rem;
+		}
+
+		.form-label-group input {
+		  height: auto;
+		  border-radius: 2rem;
+		}
+
+		.form-label-group>input,
+		.form-label-group>label {
+		  padding: var(--input-padding-y) var(--input-padding-x);
+		}
+
+		.form-label-group>label {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  display: block;
+		  width: 100%;
+		  margin-bottom: 0;
+		  /* Override default `<label>` margin */
+		  line-height: 1.5;
+		  color: #495057;
+		  border: 1px solid transparent;
+		  border-radius: .25rem;
+		  transition: all .1s ease-in-out;
+		}
+
+		.form-label-group input::-webkit-input-placeholder {
+		  color: transparent;
+		}
+
+		.form-label-group input:-ms-input-placeholder {
+		  color: transparent;
+		}
+
+		.form-label-group input::-ms-input-placeholder {
+		  color: transparent;
+		}
+
+		.form-label-group input::-moz-placeholder {
+		  color: transparent;
+		}
+
+		.form-label-group input::placeholder {
+		  color: transparent;
+		}
+
+		.form-label-group input:not(:placeholder-shown) {
+		  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+		  padding-bottom: calc(var(--input-padding-y) / 3);
+		}
+
+		.form-label-group input:not(:placeholder-shown)~label {
+		  padding-top: calc(var(--input-padding-y) / 3);
+		  padding-bottom: calc(var(--input-padding-y) / 3);
+		  font-size: 12px;
+		  color: #777;
+		}
+
+		.btn-google {
+		  color: white;
+		  background-color: #ea4335;
+		}
+
+		.btn-facebook {
+		  color: white;
+		  background-color: #3b5998;
+		}
+
+		/* Fallback for Edge
+		-------------------------------------------------- */
+
+		@supports (-ms-ime-align: auto) {
+		  .form-label-group>label {
+			display: none;
+		  }
+		  .form-label-group input::-ms-input-placeholder {
+			color: #777;
+		  }
+		}
+
+		/* Fallback for IE
+		-------------------------------------------------- */
+
+		@media all and (-ms-high-contrast: none),
+		(-ms-high-contrast: active) {
+		  .form-label-group>label {
+			display: none;
+		  }
+		  .form-label-group input:-ms-input-placeholder {
+			color: #777;
+		  }
+		}
+		a{
+			color: white;
+		}
+	</style>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="798874771483-vsk5qrem48bk8th7g8msh3k89uuj3f75.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/api:client.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+	var googleUser = {};
+	var startApp = function() {
+	  gapi.load('auth2', function(){
+		// Retrieve the singleton for the GoogleAuth library and set up the client.
+		auth2 = gapi.auth2.init({
+		  client_id: '798874771483-vsk5qrem48bk8th7g8msh3k89uuj3f75.apps.googleusercontent.com',
+		  cookiepolicy: 'single_host_origin',
+		  // Request scopes in addition to 'profile' and 'email'
+		  //scope: 'additional_scope'
+		});
+		attachSignin(document.getElementById('customBtn'));
+	  });
+	};
+  
+	function attachSignin(element) {
+	  console.log(element.id);
+	  auth2.attachClickHandler(element, {},
+		  function(googleUser) {
+		//	document.getElementById('name').innerText = "Signed in: " +
+		//		googleUser.getBasicProfile().getName();
+				var user = googleUser.getBasicProfile();
+				var userId =  user.getId();
+				var userName = user.getName();
+				var userEmail = user.getEmail();
+				var imageURL = user.getImageUrl();
+				$.get('/login?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL, function(data,status){
+					console.log(data);
+					$.get('/updateUser?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL, function(data,status){
+					console.log(data);
+					location.href = location.href;
+					});
+				});
+		  }, function(error) {
+			alert(JSON.stringify(error, undefined, 2));
+		  });
+	}
+	</script>
+</head>
+<body>
+  	<% include ../partials/nav.ejs %>
+	<body>
+		  <div class="container">
+			<div class="row">
+			  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+				<div class="card card-signin my-5">
+				  <div class="card-body">
+					  <h5 class="card-title text-center"><b>Sign In</b></h5>
+					  <ul>
+						  <li class="error" style="color: red; display: none;">Sorry, we only support Google login at the moment.</li>
+					  </ul>
+					<form class="form-signin" onsubmit="return false">
+					  <div class="form-label-group">
+						<input onclick="displayError()" onkeydown="displayError()" name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" >
+						<label for="inputEmail">Email address</label>
+					  </div>
+
+					  <div class="form-label-group">
+						<input onclick="displayError()" onkeydown="displayError()" name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" >
+						<label for="inputPassword">Password</label>
+					  </div>
+					  <button disabled class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+					  <hr class="my-4">
+					  <button id="customBtn" style="margin-bottom: 3%" class="btn btn-lg btn-google btn-block text-uppercase"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+					  <button disabled class="btn btn-lg btn-facebook btn-block text-uppercase"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+					  <!-- <div id="name"></div> -->
+					</form>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</body>
+	
+</body>
+<script>
+
+	function displayError(){
+		$('.error').css('display','block');
+		$('#customBtn').focus();
+		return false;
+	}
+
+	$('.current').removeClass('current');
+    $('.nav-item:nth-of-type(4)').addClass('current');
+    var left = $('.current').offset().left + 10;
+    var width = $('.current').width();
+    $('#marker').stop().animate( {  left: left, width: width  }, 0 );
+	$('.nav-item').mouseover(function(){
+	  var left = $(this).offset().left + 10;
+	  var width = $(this).width();
+	  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+	});
+
+	$('.nav-item').mouseout(function(){
+	  var left = $('.current').offset().left + 10;
+	  var width = $('.current').width();
+	  $('#marker').stop().animate( {  left: left, width: width  }, 500 );
+	});
+	
+	startApp();
+
+	
+</script>
+  
