@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var environment = require('dotenv');
 const session = require('express-session');
 
 app.set('trust proxy', 1) // trust first proxy
@@ -14,7 +15,13 @@ app.use(session({
 
 var formidable = require('formidable');
 const { google } = require('googleapis')
-const key = require("./credentials.json");
+let key = require("./credentials.json");
+
+environment.config();
+
+key.private_key_id = process.env.drive_private_key_id
+key.private_key = process.env.drive_private_key
+key.client_id = process.env.drive_client_id
 const scopes = 'https://www.googleapis.com/auth/drive';
 const jwt = new google.auth.JWT(
   key.client_email,

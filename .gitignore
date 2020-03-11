@@ -6,8 +6,6 @@ npm-debug.log
 *.env
 *.dev
 .DS_Store
-credentials.json
-littlehelp-1234-firebase-adminsdk-d12hl-0f753c3350.json
 
 # Docker
 Dockerfile
