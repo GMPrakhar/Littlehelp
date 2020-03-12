@@ -40,6 +40,14 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+
+
+// Allow only https connections
+app.get('*', function(req, res) {  
+  res.redirect('https://' + req.headers.host + req.url);
+})
+
+
 app.get('/', function(request, response) {
   response.render('pages/index');
 });
