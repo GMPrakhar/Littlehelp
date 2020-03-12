@@ -5,7 +5,7 @@ console.log(process.env)
 const serviceAccount = require('./littlehelp-1234-firebase-adminsdk-d12hl-0f753c3350.json');
 
 serviceAccount.private_key_id = process.env.firebase_private_key_id
-serviceAccount.private_key = process.env.firebase_private_key
+serviceAccount.private_key = process.env.firebase_private_key.replace(/\\n/g, '\n')
 serviceAccount.client_id = process.env.firebase_client_id
 serviceAccount.littlehelp_key = process.env.littlehelp_key
 serviceAccount.heroku_db_uri = process.env.heroku_db_uri
@@ -169,7 +169,10 @@ module.exports = function(app){
         client.query(Q, (err, Qres) => {
 
             try{
-                if (err) throw err;
+                if (err){
+                    console.log(err);
+                    throw err;
+                } 
             }catch(err){
                 console.log(err);
                 msg.result = "failure";
@@ -306,7 +309,10 @@ module.exports = function(app){
         client.query(Q, (err, Qres) => {
 
             try{
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    throw err;
+                }
             }catch(err){
                 console.log(err);
                 msg.result = "failure";
