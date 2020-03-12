@@ -44,7 +44,8 @@ app.set('view engine', 'ejs');
 
 // Allow only https connections
 app.get('*', function(req, res) {  
-  res.redirect('https://' + req.headers.host + req.url);
+  if(!req.secure)
+    res.redirect('https://' + req.headers.host + req.url);
 })
 
 
