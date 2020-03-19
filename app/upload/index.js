@@ -1,7 +1,7 @@
 
 var data_handler = require('./data');
 var formidable = require('formidable');
-
+var fs = require('fs');
 
 function upload_view(request, response) {
     if(request.session.user) response.render('pages/upload', {session: request.session.user});
