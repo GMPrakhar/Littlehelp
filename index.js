@@ -3,20 +3,10 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var environment = require('dotenv');
-const session = require('express-session');
-var formidable = require('formidable');
-const { google } = require('googleapis');
 var APIS = require('./apis')(app)
 
 app.set('trust proxy', 1) // trust first proxy
 
-app.use(session({
-  secret: 'littlehelp123',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true, maxAge: 1800000 },
-
-}))
 
 environment.config();
 
@@ -31,8 +21,8 @@ app.set('view engine', 'ejs');
 
 
 
-// Allow only https connections
-// Comment this function if you are using on localhost
+// // Allow only https connections
+// // Comment this function if you are using on localhost
 
 app.get('*', function(req, res, next) {  
   console.log(req.secure);

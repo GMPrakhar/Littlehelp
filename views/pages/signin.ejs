@@ -169,19 +169,15 @@
 				var userEmail = user.getEmail();
 				var imageURL = user.getImageUrl();
 				console.log(userName);
-				$.get('/login?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL, function(data,status){
-					console.log(data);
-					$.get('/updateUser?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL, function(data,status){
-					console.log(data);
-					location.href = location.href;
-					}, function(err){
-						console.log(err);
-					});
-				}, function(err){
-					console.log(err);
-				});
-		  }, function(error) {
-			alert(JSON.stringify(error, undefined, 2));
+
+				$.get('/login?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL)
+				.then(function(result){
+					$.get('/updateUser?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL)
+					.then(function(data, status){
+						location.reload();
+					}).fail(function(err){ console.log(err);});
+				})
+				.fail(function(err){ console.log(err);});
 		  });
 	}
 	</script>

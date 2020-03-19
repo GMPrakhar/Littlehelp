@@ -1,6 +1,7 @@
 const admin = require('firebase-admin');
 var environment = require('dotenv');
 environment.config();
+
 console.log(process.env)
 const serviceAccount = require('./littlehelp-1234-firebase-adminsdk-d12hl-0f753c3350.json');
 
@@ -85,6 +86,15 @@ function checkValidity(key, value, constraints, allowedValues, msg, paramList){
 module.exports = function(app){
 
 
+    const session = require('express-session');
+
+    app.use(session({
+        secret: 'littlehelp123',
+        resave: false,
+        saveUninitialized: true,
+        cookie: { secure: true, maxAge: 1800000 },
+      
+      }));
     // app.get('/bogin', function(req, res){
     //     req.session.user = req.query;
     //     console.log(req.session);
@@ -95,7 +105,7 @@ module.exports = function(app){
 
     app.get('/login', function(req,res){
         var msg = {};
-
+        console.log(req.query);
         if(!(req.query.key===serviceAccount.littlehelp_key)){
             msg.msg = "Invalid Secret Parameter";
             msg.result = "failure";
