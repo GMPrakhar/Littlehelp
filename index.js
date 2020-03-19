@@ -34,13 +34,13 @@ app.set('view engine', 'ejs');
 // Allow only https connections
 // Comment this function if you are using on localhost
 
-// app.get('*', function(req, res, next) {  
-//   console.log(req.secure);
-//   if(!req.secure)
-//     res.redirect('https://' + req.headers.host + req.url);
-//   else
-//     next();
-// })
+app.get('*', function(req, res, next) {  
+  console.log(req.secure);
+  if(!req.secure)
+    res.redirect('https://' + req.headers.host + req.url);
+  else
+    next();
+})
 
 // Configure Routes to all the components using their respective routers
 
