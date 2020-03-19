@@ -16,7 +16,7 @@ const jwt = new google.auth.JWT(
 
 function createFileInDrive(fileMetadata, media, callback){
     jwt.authorize((err, response) => {
-        google.drive.files.create({
+      google.drive('v3').files.create({
         auth: jwt,
         resource: fileMetadata,
         media: media,
