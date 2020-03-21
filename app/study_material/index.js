@@ -37,17 +37,17 @@ function getResults(req,res){
 
     // Get files from the drive using the data handler 
 
-    data_handler.getFilesFromDrive(parents, token,
-        (err, result) => {
-            if(err) {
-                console.log(err);
-                res.end('Some error occured');
-            }
-            else
-                res.end(JSON.stringify({files: result.data.files, nextPageToken: result.data.nextPageToken}));
-        }
-    );
+    data_handler.getFilesFromDrive(parents, token, getFilesFromDriveHandler);
 
+}
+
+function getFilesFromDriveHandler(err, result){
+    if(err) {
+        console.log(err);
+        res.end('Some error occured');
+    }
+    else
+        res.end(JSON.stringify({files: result.data.files, nextPageToken: result.data.nextPageToken}));
 }
 
 
@@ -70,5 +70,6 @@ function updateViews(req, res){
 module.exports = {
     study,
     getResults,
+    getFilesFromDriveHandler,
     updateViews
 }

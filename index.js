@@ -5,6 +5,9 @@ var fs = require('fs');
 var environment = require('dotenv');
 var APIS = require('./apis')(app)
 
+var http = require('http');
+var https = require('https');
+
 app.set('trust proxy', 1) // trust first proxy
 
 
@@ -22,15 +25,17 @@ app.set('view engine', 'ejs');
 
 
 // // Allow only https connections
-// // Comment this function if you are using on localhost
 
-app.get('*', function(req, res, next) {  
-  console.log(req.secure);
-  if(!req.secure)
-    res.redirect('https://' + req.headers.host + req.url);
-  else
-    next();
-})
+if(environment.environment == "Production"){
+  app.get('*', function(req, res, next) {  
+    console.log(req.secure);
+    if(!req.secure)
+    {
+      res.redirect('https://' + req.headers.host + req.url);
+    }else
+      next();
+  })
+}
 
 // Configure Routes to all the components using their respective routers
 
@@ -55,5 +60,3 @@ app.get('/driver', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-
