@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 
 app.get('*', function(req, res, next) {  
   console.log(req.secure);
-  if(!req.secure)
+  if(!req.secure && process.env.environment == "Production")
     res.redirect('https://' + req.headers.host + req.url);
   else
     next();

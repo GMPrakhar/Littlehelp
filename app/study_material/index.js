@@ -3,7 +3,7 @@ var data_handler = require('./data');
 
 function study(req, res)
 {
-    if(req.session.user)
+    if(req.session.user || process.env.environment != "Production")
     {
         res.render('pages/study', {session: req.session.user});
     }
