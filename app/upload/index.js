@@ -4,7 +4,12 @@ var formidable = require('formidable');
 var fs = require('fs');
 
 function upload_view(request, response) {
-    if(request.session.user) response.render('pages/upload', {session: request.session.user});
+  if(process.env.environment == "local"){
+    request.session.user = {
+      userId : 1
+    }
+  }
+    if(request.session.user || process.env.environment != "Production") response.render('pages/upload', {session: request.session.user});
     else response.render('pages/signin');
 }
 
