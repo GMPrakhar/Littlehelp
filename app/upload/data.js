@@ -26,4 +26,16 @@ function createFileInDrive(fileMetadata, media, callback){
     });   
 }
 
+function deleteFileInDrive(fileMetadata, media, callback){
+  jwt.authorize((err, response) => {
+    google.drive('v3').files.delete({
+      auth: jwt,
+      resource: fileMetadata,
+      media: media,
+      fields: 'id'
+      }, 
+      callback);
+  });   
+}
+
 exports.createFileInDrive = createFileInDrive;
