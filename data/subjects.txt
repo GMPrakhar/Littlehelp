@@ -4150,4 +4150,46 @@
         "topic": "GENERAL",
         "show": true
     }
+    {
+        "sem": "7",
+        "branch": "CS",
+        "subject": "CLOUD COMPUTING",
+        "topic": "GENERAL",
+        "show": true
+    }
+    {
+        "sem": "7",
+        "branch": "CS",
+        "subject": "DEEP LEARNING",
+        "topic": "GENERAL",
+        "show": true
+    }
+    {
+        "sem": "7",
+        "branch": "CS",
+        "subject": "DATA ANALYTICS",
+        "topic": "GENERAL",
+        "show": true
+    }
+    {
+        "sem": "8",
+        "branch": "CS",
+        "subject": "INTERNET OF THINGS",
+        "topic": "GENERAL",
+        "show": true
+    }
+    {
+        "sem": "8",
+        "branch": "CS",
+        "subject": "MACHINE LEARNING",
+        "topic": "GENERAL",
+        "show": true
+    }
+    {
+        "sem": "8",
+        "branch": "CS",
+        "subject": "DATA MINING",
+        "topic": "GENERAL",
+        "show": true
+    }
 ]
