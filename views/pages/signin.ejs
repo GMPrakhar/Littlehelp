@@ -172,10 +172,7 @@
 
 				$.get('/login?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL)
 				.then(function(result){
-					$.get('/updateUser?key=4JAN2017&userID='+userId+'&userName='+userName+'&userEmail='+userEmail+'&userImageURL='+imageURL)
-					.then(function(data, status){
-						location.reload();
-					}).fail(function(err){ console.log(err);});
+					location.reload();
 				})
 				.fail(function(err){ console.log(err);});
 		  });

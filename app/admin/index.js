@@ -8,7 +8,7 @@ function index(request, response) {
     }
     
 }
-
+//It list all the files available
 function listFiles(req, res){
     var parent = req.query.parent?req.query.parent:'root';
 
@@ -18,7 +18,7 @@ function listFiles(req, res){
         res.end(JSON.stringify({files: result.data.files}));
     });
 }
-
+//It list all the folders available
 function listFolders(req, res){
     var parent = req.query.parent?req.query.parent:'root';
     
@@ -29,7 +29,7 @@ function listFolders(req, res){
         res.end(JSON.stringify({folders: result.data.files}));
     });
 }
-
+//It enables/dosbales permisions fro viewing according to the role
 function enableViewPermissions(req, res){
     var permissions = 
         {
@@ -43,7 +43,7 @@ function enableViewPermissions(req, res){
     });
 }
 
-
+// used to create a folder
 function createFolder(req, res){
     var name = req.query.name;
     var parent = req.query.parent?req.query.parent:'root';
@@ -64,7 +64,7 @@ function createFolder(req, res){
     });
 }
 
-
+// used to delete particular file
 function deleteFile(req, res){
     var id = req.query.id;
 
@@ -79,7 +79,7 @@ function deleteFile(req, res){
         }
     });
 }
-
+//displays the list of the contributors
 function displayContributors(req,res){
     res.render("pages/contributors");
 }
